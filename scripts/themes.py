@@ -405,7 +405,7 @@ def stage_omarchy(omarchy, theme, template, commit, work, notes):
             notes.append(f"No wallpaper: {'; '.join(problems)}")
         else:
             source =f"{OMARCHY}/blob/{commit}/themes/{theme.name}/backgrounds/{picture.name}"
-            opacity = veiled_at(staged / picture.name, tomllib.loads(body)["background"])
+            opacity = veiled_at(staged / picture.name, tomllib.loads(body).get("background"))
             notes.append(f"Wallpaper at opacity {opacity}")
             lines += [
                 "",
@@ -425,14 +425,25 @@ def veiled_at(path, page):
     OMARCHY_OPACITY.
 
     Laid the way the window lays it: the page's colour mixed in at the
-    opacity in sRGB's own numbers, unconverted (obelus-gui's paint)."""
-    with Image.open(path) as picture:
-        picture = picture.convert("RGB")
-        # How much a picture shows does not need every pixel of it, and a
-        # few thousand keep the whole of omarchy's themes to seconds.
-        picture.thumbnail((128, 128), Image.BOX)
-        pixels = list(picture.getdata())
-    page = tuple(int(page.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
+    opacity in sRGB's own numbers, unconverted (obelus-gui's paint).
+
+    Refuses the theme, rather than failing the run, where there is nothing
+    to measure: this comes before obelus-check-theme, which would have said
+    so of a picture that will not decode."""
+    if not isinstance(page, str) or not re.fullmatch(r"#[0-9A-Fa-f]{6}", page):
+        raise Refused(f"The page's colour is {page!r}, and a wallpaper is measured against #rrggbb")
+    page = tuple(int(page[i:i + 2], 16) for i in (1, 3, 5))
+    try:
+        with Image.open(path) as picture:
+            picture = picture.convert("RGBA")
+            # How much a picture shows does not need every pixel of it, and a
+            # few thousand keep the whole of omarchy's themes to seconds.
+            picture.thumbnail((128, 128), Image.BOX)
+    except OSError as error:
+        raise Refused(f"{path.name} cannot be decoded: {error}")
+    # Where it is see-through, the window shows the black it clears to.
+    ground = Image.new("RGBA", picture.size, (0, 0, 0, 255))
+    pixels = list(Image.alpha_composite(ground, picture).convert("RGB").getdata())
     for opacity in range(OMARCHY_OPACITY, OMARCHY_LEAST_OPACITY, -1):
         if showing(pixels, page, opacity) >= OMARCHY_SHOWING:
             return opacity
