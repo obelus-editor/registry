@@ -11,7 +11,7 @@ on:
 env:
   # Where obelus-check-theme and the omarchy template come from: a branch or
   # a tag of obelus-editor/obelus. publish.yml says the same.
-  OBELUS_REF: theme-wallpaper
+  OBELUS_REF: master
 
 jobs:
   themes:
