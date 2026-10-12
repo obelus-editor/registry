@@ -1,0 +1,36 @@
+name: Check
+
+# A pull request makes the whole site as publishing would, and publishes
+# nothing: an entry that cannot be listed fails here, before anybody merges
+# it, and the summary shows what each new theme is -- its picture, its
+# licence, where the picture came from.
+
+on:
+  pull_request:
+
+env:
+  # Where obelus-check-theme and the omarchy template come from: a branch or
+  # a tag of obelus-editor/obelus. publish.yml says the same.
+  OBELUS_REF: theme-wallpaper
+
+jobs:
+  themes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/tools
+
+      - name: What is published now
+        run: |
+          git clone -q --depth 1 --branch gh-pages \
+            "https://github.com/${{ github.repository }}" .work/old || mkdir -p .work/old
+
+      - name: Themes
+        run: |
+          omarchy=()
+          [ -d .work/omarchy ] && omarchy=(--omarchy .work/omarchy)
+          python scripts/themes.py build \
+            --old .work/old --out .work/site \
+            --check-theme ~/.cargo/bin/obelus-check-theme \
+            --template .work/obelus.toml.tpl "${omarchy[@]}"

@@ -1,0 +1,54 @@
+name: Tools
+description: >-
+  What making the themes takes: obelus-check-theme and Obelus's omarchy
+  template, both from obelus-editor/obelus at OBELUS_REF, and a clone of
+  basecamp/omarchy with its history.
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+
+    - name: Python packages
+      shell: bash
+      # Pinned, because a picture omarchy ships too large is made smaller
+      # here, and another Pillow could make other bytes of it.
+      run: pip install pillow==11.3.0
+
+    - name: Which Obelus
+      id: obelus
+      shell: bash
+      run: |
+        commit=$(git ls-remote https://github.com/obelus-editor/obelus \
+          "refs/heads/$OBELUS_REF" "refs/tags/$OBELUS_REF" | head -n 1 | cut -f 1)
+        if [ -z "$commit" ]; then
+          echo "::error::obelus-editor/obelus has no branch or tag called $OBELUS_REF"
+          exit 1
+        fi
+        echo "commit=$commit" >> "$GITHUB_OUTPUT"
+
+    - uses: actions/cache@v4
+      id: cache
+      with:
+        path: ~/.cargo/bin/obelus-check-theme
+        key: obelus-check-theme-${{ steps.obelus.outputs.commit }}
+
+    - name: obelus-check-theme
+      if: steps.cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        cargo install --locked --git https://github.com/obelus-editor/obelus \
+          --rev "${{ steps.obelus.outputs.commit }}" obelus-check-theme
+
+    - name: The template, and omarchy
+      shell: bash
+      run: |
+        mkdir -p .work
+        curl -fsSL -o .work/obelus.toml.tpl \
+          "https://raw.githubusercontent.com/obelus-editor/obelus/${{ steps.obelus.outputs.commit }}/contrib/omarchy/obelus.toml.tpl"
+        # The whole history and none of the blobs it does not need: which
+        # commit last touched each theme is the theme's version.
+        git clone -q --filter=blob:none https://github.com/basecamp/omarchy .work/omarchy \
+          || echo "::warning::Could not clone omarchy; its themes are carried over as published"

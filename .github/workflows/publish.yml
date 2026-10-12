@@ -1,0 +1,68 @@
+name: Publish
+
+# Makes the whole site and puts it on the gh-pages branch, which GitHub
+# Pages serves. The branch is one commit holding only what is listed now,
+# made again every time: a theme taken out of the registry is taken off the
+# site, and no old package lingers in a history.
+#
+# Every kind of thing the registry lists is made here, into one site,
+# because the branch is replaced whole. Themes are the first.
+
+on:
+  push:
+    branches: [main]
+  # omarchy's themes follow omarchy, which nothing here hears about.
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+env:
+  # Where obelus-check-theme and the omarchy template come from: a branch or
+  # a tag of obelus-editor/obelus. check.yml says the same.
+  OBELUS_REF: theme-wallpaper
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/tools
+
+      - name: What is published now
+        run: |
+          git clone -q --depth 1 --branch gh-pages \
+            "https://github.com/${{ github.repository }}" .work/old || mkdir -p .work/old
+
+      - name: Themes
+        run: |
+          omarchy=()
+          [ -d .work/omarchy ] && omarchy=(--omarchy .work/omarchy)
+          python scripts/themes.py build \
+            --old .work/old --out .work/site \
+            --check-theme ~/.cargo/bin/obelus-check-theme \
+            --template .work/obelus.toml.tpl "${omarchy[@]}"
+
+      - name: Publish, if anything changed
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd .work/site
+          touch .nojekyll
+          if diff -rq --exclude=.git . ../old > /dev/null; then
+            echo "Nothing changed; the site stays as it is."
+            exit 0
+          fi
+          git init -q -b gh-pages
+          git add -A
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "Publish ${GITHUB_SHA::12}"
+          git push -q -f "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}" gh-pages
