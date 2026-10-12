@@ -51,10 +51,24 @@ ENTRIES = ROOT / "themes" / "entries"
 FILE = "theme.toml"
 OMARCHY = "https://github.com/basecamp/omarchy"
 PREFIX = "omarchy-"
-# How much of the page covers an omarchy picture. Higher than Obelus's own
-# default: omarchy's pictures are a desktop's -- bright and busy -- and at
-# the default they are heavier under code than a picture chosen for it.
+# How much of the page covers an omarchy picture, at most. Higher than
+# Obelus's own default: omarchy's pictures are a desktop's -- bright and
+# busy -- and at the default they are heavier under code than a picture
+# chosen for it.
 OMARCHY_OPACITY = 95
+# And at least. A picture that is nearly all one colour -- lumon's,
+# vantablack's -- would need the page at half or less to show as much,
+# and what little it has would then be loud under code.
+OMARCHY_LEAST_OPACITY = 70
+# How much a picture under the page has to show: how far its colours stray
+# from one another once the page is over it, as CIELAB's standard deviation.
+# Not how far they stray from the page -- a picture that is all one tint
+# reads as a page of another colour -- and the same number on a light page
+# and a dark one, because CIELAB is spaced the way an eye sees. Found by
+# looking: rose-pine's pale shapes on its pale page were nothing at 95
+# (0.7), too faint at 91 (1.3) and 85 (2.1), too heavy at 75 (3.5), and
+# right at 80 (2.8).
+OMARCHY_SHOWING = 2.8
 # What Obelus will make a directory of (`obelus_themes::named_safely`).
 NAME = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_.-]*")
 COMMIT = re.compile(r"[0-9a-f]{40}")
@@ -391,16 +405,80 @@ def stage_omarchy(omarchy, theme, template, commit, work, notes):
             notes.append(f"No wallpaper: {'; '.join(problems)}")
         else:
             source =f"{OMARCHY}/blob/{commit}/themes/{theme.name}/backgrounds/{picture.name}"
+            opacity = veiled_at(staged / picture.name, tomllib.loads(body).get("background"))
+            notes.append(f"Wallpaper at opacity {opacity}")
             lines += [
                 "",
                 "[wallpaper]",
                 f"file = {json.dumps(picture.name)}",
-                f"opacity = {OMARCHY_OPACITY}",
+                f"opacity = {opacity}",
                 'license = "MIT"',
                 f"source = {json.dumps(source)}",
             ]
     (staged / FILE).write_text("\n".join(lines) + "\n")
     return staged
+
+
+def veiled_at(path, page):
+    """The most of the page that can be laid over a picture with the picture
+    still showing OMARCHY_SHOWING, between OMARCHY_LEAST_OPACITY and
+    OMARCHY_OPACITY.
+
+    Laid the way the window lays it: the page's colour mixed in at the
+    opacity in sRGB's own numbers, unconverted (obelus-gui's paint).
+
+    Refuses the theme, rather than failing the run, where there is nothing
+    to measure: this comes before obelus-check-theme, which would have said
+    so of a picture that will not decode."""
+    if not isinstance(page, str) or not re.fullmatch(r"#[0-9A-Fa-f]{6}", page):
+        raise Refused(f"The page's colour is {page!r}, and a wallpaper is measured against #rrggbb")
+    page = tuple(int(page[i:i + 2], 16) for i in (1, 3, 5))
+    try:
+        with Image.open(path) as picture:
+            picture = picture.convert("RGBA")
+            # How much a picture shows does not need every pixel of it, and a
+            # few thousand keep the whole of omarchy's themes to seconds.
+            picture.thumbnail((128, 128), Image.BOX)
+    except OSError as error:
+        raise Refused(f"{path.name} cannot be decoded: {error}")
+    # Where it is see-through, the window shows the black it clears to.
+    ground = Image.new("RGBA", picture.size, (0, 0, 0, 255))
+    pixels = list(Image.alpha_composite(ground, picture).convert("RGB").getdata())
+    for opacity in range(OMARCHY_OPACITY, OMARCHY_LEAST_OPACITY, -1):
+        if showing(pixels, page, opacity) >= OMARCHY_SHOWING:
+            return opacity
+    return OMARCHY_LEAST_OPACITY
+
+
+def showing(pixels, page, opacity):
+    """How far the colours of a picture under the page at `opacity` stray
+    from one another: their standard deviation in CIELAB."""
+    through = (100 - opacity) / 100
+    seen = [
+        lab(*(ground + (colour - ground) * through for colour, ground in zip(pixel, page)))
+        for pixel in pixels
+    ]
+    middle = [sum(colour[i] for colour in seen) / len(seen) for i in range(3)]
+    return (
+        sum(sum((colour[i] - middle[i]) ** 2 for i in range(3)) for colour in seen) / len(seen)
+    ) ** 0.5
+
+
+def lab(red, green, blue):
+    """An sRGB colour, each part out of 255, in CIELAB under D65."""
+
+    def linear(part):
+        part /= 255
+        return part / 12.92 if part <= 0.04045 else ((part + 0.055) / 1.055) ** 2.4
+
+    def f(t):
+        return t ** (1 / 3) if t > 216 / 24389 else (24389 / 27 * t + 16) / 116
+
+    red, green, blue = linear(red), linear(green), linear(blue)
+    x = f((0.4124 * red + 0.3576 * green + 0.1805 * blue) / 0.95047)
+    y = f(0.2126 * red + 0.7152 * green + 0.0722 * blue)
+    z = f((0.0193 * red + 0.1192 * green + 0.9505 * blue) / 1.08883)
+    return 116 * y - 16, 500 * (x - y), 200 * (y - z)
 
 
 def smaller(path):
