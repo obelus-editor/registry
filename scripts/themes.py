@@ -51,6 +51,10 @@ ENTRIES = ROOT / "themes" / "entries"
 FILE = "theme.toml"
 OMARCHY = "https://github.com/basecamp/omarchy"
 PREFIX = "omarchy-"
+# How much of the page covers an omarchy picture. Higher than Obelus's own
+# default: omarchy's pictures are a desktop's -- bright and busy -- and at
+# the default they are heavier under code than a picture chosen for it.
+OMARCHY_OPACITY = 95
 # What Obelus will make a directory of (`obelus_themes::named_safely`).
 NAME = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_.-]*")
 COMMIT = re.compile(r"[0-9a-f]{40}")
@@ -391,6 +395,7 @@ def stage_omarchy(omarchy, theme, template, commit, work, notes):
                 "",
                 "[wallpaper]",
                 f"file = {json.dumps(picture.name)}",
+                f"opacity = {OMARCHY_OPACITY}",
                 'license = "MIT"',
                 f"source = {json.dumps(source)}",
             ]
