@@ -56,18 +56,18 @@ PREFIX = "omarchy-"
 # busy -- and at the default they are heavier under code than a picture
 # chosen for it.
 OMARCHY_OPACITY = 95
-# And at least, which is Obelus's own default
-# (`obelus_theme::wallpaper::OPACITY`): a picture that needs the page
-# thinner than that to be seen is not one to read code on.
-OMARCHY_LEAST_OPACITY = 85
+# And at least. A picture that is nearly all one colour -- lumon's,
+# vantablack's -- would need the page at forty to show as much as the rest,
+# and what little it has would then be loud under code.
+OMARCHY_LEAST_OPACITY = 70
 # How much a picture under the page has to show: how far its colours stray
 # from one another once the page is over it, as CIELAB's standard deviation.
 # Not how far they stray from the page -- a picture that is all one tint
 # reads as a page of another colour -- and the same number on a light page
-# and a dark one, because CIELAB is spaced the way an eye sees. At 95,
-# catppuccin's picture is 1.3 and is seen; rose-pine's pale shapes on its
-# pale page are 0.7, and a reader saw no picture at all.
-OMARCHY_SHOWING = 1.2
+# and a dark one, because CIELAB is spaced the way an eye sees. Found by
+# looking: rose-pine's pale shapes on its pale page were nothing at 95
+# (0.7), too faint at 91 (1.3) and 85 (2.1), and right at 75 (3.5).
+OMARCHY_SHOWING = 3.5
 # What Obelus will make a directory of (`obelus_themes::named_safely`).
 NAME = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_.-]*")
 COMMIT = re.compile(r"[0-9a-f]{40}")
