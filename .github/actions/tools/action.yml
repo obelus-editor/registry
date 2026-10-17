@@ -52,3 +52,9 @@ runs:
         # commit last touched each theme is the theme's version.
         git clone -q --filter=blob:none https://github.com/basecamp/omarchy .work/omarchy \
           || echo "::warning::Could not clone omarchy; its themes are carried over as published"
+        # Only the list, as it is now: themes/index.html is what the site's
+        # themes page is made from, and nothing else of the site is read.
+        { git clone -q --depth 1 --filter=blob:none --sparse \
+            https://github.com/omacom/omarchy-site .work/omarchy-site \
+          && git -C .work/omarchy-site sparse-checkout set --no-cone /themes/index.html; } \
+          || echo "::warning::Could not clone omarchy's site; its community's themes are carried over as published"
