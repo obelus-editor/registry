@@ -11,7 +11,9 @@ name: Publish
 on:
   push:
     branches: [main]
-  # omarchy's themes follow omarchy, which nothing here hears about.
+  # omarchy's themes follow omarchy, and the community's follow their
+  # authors -- a theme whose picture has gone stops being listed here --
+  # none of which anything here hears about.
   schedule:
     - cron: "17 4 * * *"
   workflow_dispatch:
@@ -42,9 +44,14 @@ jobs:
             "https://github.com/${{ github.repository }}" .work/old || mkdir -p .work/old
 
       - name: Themes
+        env:
+          # A question to GitHub's API for each community theme, which is
+          # more than an hour allows a caller with no token.
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           omarchy=()
           [ -d .work/omarchy ] && omarchy=(--omarchy .work/omarchy)
+          [ -f .work/omarchy-site/themes/index.html ] && omarchy+=(--site .work/omarchy-site)
           python scripts/themes.py build \
             --old .work/old --out .work/site \
             --check-theme ~/.cargo/bin/obelus-check-theme \

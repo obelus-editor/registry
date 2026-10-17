@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """The themes half of the registry's site.
 
-Every theme listed in themes/entries, and every theme omarchy ships, checked
-the way Obelus reads it, packed so that the same theme always makes the same
-bytes, and named in one themes/index.json beside the packages:
+Every theme listed in themes/entries, every theme omarchy ships, and every
+theme omarchy's site lists from its community, checked the way Obelus reads
+it, packed so that the same theme always makes the same bytes, and named in
+one themes/index.json beside the packages:
 
     themes.py build --old OLD --out OUT \
-        --check-theme BIN --template TPL [--omarchy DIR]
+        --check-theme BIN --template TPL [--omarchy DIR] [--site DIR]
 
 OLD is the site as it was last published -- the gh-pages branch, or an
 empty directory the first time. An entry whose commit has not moved is
@@ -17,6 +18,23 @@ updated and does not take it off the site.
 omarchy's themes are made again on every run, because making one costs
 nothing and the bytes come out the same when nothing changed. Without
 --omarchy (the clone failed) the ones already published are carried over.
+
+The community's are made again on every run too, from each author's
+repository as it is now -- which is also how a theme whose repository or
+picture has gone stops being listed: it is not made, so it is not in the
+index. Their list is themes/index.html in omarchy's site (--site), read from
+a clone of it rather than from the page, because that file is the list --
+contributors add a theme to it by a pull request -- and the page is only
+what it renders to.
+
+A community theme whose author says it may be copied is packed whole, as
+omarchy's are. One whose author says nothing -- most of them -- has its
+colours packed, which this script made, and not its picture, which nobody
+may hand on: the index says where the author keeps it, at the commit read,
+and what it hashes to, and Obelus fetches it from there. Without --site, or
+without --omarchy (whose resolver makes the colours), the ones published
+are carried over -- those whose picture is fetched only while it still
+hashes to what the index says.
 
 An entry that cannot be listed fails the run, because it is somebody's pull
 request. An omarchy theme that cannot be made is said in the summary and
@@ -35,7 +53,10 @@ import subprocess
 import sys
 import tarfile
 import tempfile
+import urllib.error
+import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -51,6 +72,18 @@ ENTRIES = ROOT / "themes" / "entries"
 FILE = "theme.toml"
 OMARCHY = "https://github.com/basecamp/omarchy"
 PREFIX = "omarchy-"
+# The community's list: a figure for each theme, a link to its repository,
+# and its picture on the site named for it (omacom/omarchy-site).
+SITE_LIST = "themes/index.html"
+SITE_FIGURE = '<figure class="themes__theme">'
+SITE_THEME = re.compile(
+    r'<figure class="themes__theme">\s*'
+    r'<a href="https://github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+?)/?">'
+    r'<img src="/assets/themes/([a-z0-9][a-z0-9-]*)\.webp"[^>]*></a>\s*'
+    r'<figcaption><a href="[^"]*">([^<]+)</a></figcaption>\s*</figure>'
+)
+# How many authors' repositories are read at once.
+AT_ONCE = 8
 # How much of the page covers an omarchy picture, at most. Higher than
 # Obelus's own default: omarchy's pictures are a desktop's -- bright and
 # busy -- and at the default they are heavier under code than a picture
@@ -81,7 +114,7 @@ LARGEST_FILE = 5 * 1024 * 1024
 LIGHT_BASES = {"light", "gruvbox-light", "catppuccin-latte", "solarized-light"}
 SPDX = "https://raw.githubusercontent.com/spdx/license-list-data/main/json/licenses.json"
 # The order the groups are listed in, which is the order Obelus shows them.
-GROUPS = ["obelus", "omarchy"]
+GROUPS = ["obelus", "omarchy", "omarchy-community"]
 
 
 class Refused(Exception):
@@ -238,8 +271,11 @@ def licensed(expression, known):
     return True
 
 
-def registry_rules(staged, theme, known):
-    """What the registry asks of a theme beyond what Obelus does."""
+def registry_rules(staged, theme, known, fetched=False):
+    """What the registry asks of a theme beyond what Obelus does -- of a
+    picture Obelus fetches from its author, only that where it came from is
+    said: it is not this registry's to hand on, so neither are its terms
+    nor its size."""
     problems = []
     about = theme.get("about")
     for key in ("author", "description"):
@@ -251,9 +287,9 @@ def registry_rules(staged, theme, known):
         file = string(wallpaper, "file")
         if file:
             named.add(Path(file).as_posix())
-            if (staged / file).is_file():
+            if (staged / file).is_file() and not fetched:
                 problems += picture_rules(staged / file)
-        if not licensed(string(wallpaper, "license"), known):
+        if not fetched and not licensed(string(wallpaper, "license"), known):
             problems.append("[wallpaper] license is an SPDX identifier, like CC-BY-4.0")
         if not string(wallpaper, "source"):
             problems.append("[wallpaper] source says where the picture came from")
@@ -300,7 +336,7 @@ def pack(staged, name, into):
     return hashlib.sha256(buffer.getvalue()).hexdigest()
 
 
-def record(name, group, theme, commit, updated, package, sha256):
+def record(name, group, theme, commit, updated, package, sha256, fetched=None):
     line = {
         "name": name,
         "group": group,
@@ -310,27 +346,41 @@ def record(name, group, theme, commit, updated, package, sha256):
     }
     wallpaper = theme.get("wallpaper")
     if isinstance(wallpaper, dict) and string(wallpaper, "file"):
-        line["wallpaper"] = {
-            "license": string(wallpaper, "license"),
-            "source": string(wallpaper, "source"),
-        }
+        if fetched:
+            # No licence, because there is none to give -- and where Obelus
+            # fetches it from instead of the package.
+            line["wallpaper"] = {
+                "source": string(wallpaper, "source"),
+                "file": string(wallpaper, "file"),
+                "url": fetched["url"],
+                "sha256": fetched["sha256"],
+            }
+        else:
+            line["wallpaper"] = {
+                "license": string(wallpaper, "license"),
+                "source": string(wallpaper, "source"),
+            }
     line.update(package=package, sha256=sha256, commit=commit, updated=updated)
     return line
 
 
-def finish(staged, name, group, commit, updated, out, check_theme, known, strict):
+def finish(staged, name, group, commit, updated, out, check_theme, known, strict, fetched=None):
     """Checks a staged theme, packs it into `out`, and says what the index
     says of it. `strict` holds it to the registry's rules as well as
-    Obelus's: an entry is, and omarchy's are made to fit them."""
+    Obelus's: an entry is, and omarchy's are made to fit them. `fetched` is
+    a picture the theme names that Obelus fetches from its author: checked
+    here with the theme, and left out of the package."""
     obelus_reads(check_theme, staged)
     theme = tomllib.loads((staged / FILE).read_text())
     if strict:
-        problems = registry_rules(staged, theme, known)
+        problems = registry_rules(staged, theme, known, fetched=bool(fetched))
         if problems:
             raise Refused("\n".join(problems))
+    if fetched:
+        (staged / string(theme.get("wallpaper"), "file")).unlink()
     package = f"{name}-{commit[:12]}.tar.gz"
     sha256 = pack(staged, name, out / package)
-    return record(name, group, theme, commit, updated, package, sha256)
+    return record(name, group, theme, commit, updated, package, sha256, fetched)
 
 
 # -- omarchy -----------------------------------------------------------------
@@ -368,43 +418,67 @@ def render(template, colours):
 def stage_omarchy(omarchy, theme, template, commit, work, notes):
     """One omarchy theme made into an Obelus theme: Obelus's template filled
     from its palette, and the first of its pictures as the wallpaper."""
-    name = PREFIX + theme.name
-    colours = palette(omarchy, theme / "colors.toml")
-    body = render(template, colours)
-    staged = work / "staged" / name
-    staged.mkdir(parents=True)
-    lines = [
-        f"# Made by the Obelus registry from omarchy's {theme.name} theme, as",
-        f"# basecamp/omarchy had it at {commit}, through Obelus's",
-        "# contrib/omarchy/obelus.toml.tpl.",
-        "",
-        body.rstrip("\n"),
-        "",
-        "[about]",
-        'author = "omarchy"',
-        f"description = {json.dumps(f'The {theme.name} theme from omarchy')}",
-    ]
     backgrounds = theme / "backgrounds"
     pictures = sorted(
         path
         for path in (backgrounds.iterdir() if backgrounds.is_dir() else [])
         if path.is_file() and path.suffix.lower() in PICTURES
     )
-    if pictures:
-        picture = pictures[0]
+    return stage_palette(
+        omarchy,
+        PREFIX + theme.name,
+        theme / "colors.toml",
+        template,
+        [
+            f"# Made by the Obelus registry from omarchy's {theme.name} theme, as",
+            f"# basecamp/omarchy had it at {commit}, through Obelus's",
+            "# contrib/omarchy/obelus.toml.tpl.",
+        ],
+        ("omarchy", f"The {theme.name} theme from omarchy"),
+        pictures[0] if pictures else None,
+        ("MIT", f"{OMARCHY}/blob/{commit}/themes/{theme.name}/backgrounds/"),
+        work,
+        notes,
+    )
+
+
+def stage_palette(omarchy, name, colors, template, header, about, picture, credit, work, notes,
+                  whole=True):
+    """An omarchy palette made into an Obelus theme: Obelus's template filled
+    from it through omarchy's resolver, and `picture` as its wallpaper.
+
+    `credit` is the picture's licence -- empty for one nobody may hand on --
+    and the directory it came from, to which its file's name is added. A
+    picture that is not `whole` is its author's to hand on and not this
+    registry's: it is not made smaller, because a smaller one would be a
+    copy, and it is beside the theme only to be checked and measured."""
+    colours = palette(omarchy, colors)
+    body = render(template, colours)
+    staged = work / "staged" / name
+    staged.mkdir(parents=True)
+    author, description = about
+    lines = header + [
+        "",
+        body.rstrip("\n"),
+        "",
+        "[about]",
+        f"author = {json.dumps(author)}",
+        f"description = {json.dumps(description)}",
+    ]
+    if picture:
         shutil.copyfile(picture, staged / picture.name)
         # omarchy's pictures are drawn for a desktop and many are larger
         # than the registry takes; Obelus draws one no larger than the
         # screen anyway, so the picture is made smaller rather than left out.
-        if picture_rules(staged / picture.name):
+        if whole and picture_rules(staged / picture.name):
             smaller(staged / picture.name)
             notes.append(f"Wallpaper made smaller to fit {LARGEST_SIDE} pixels a side")
-        problems = picture_rules(staged / picture.name)
+        problems = picture_rules(staged / picture.name) if whole else []
         if problems:
             (staged / picture.name).unlink()
             notes.append(f"No wallpaper: {'; '.join(problems)}")
         else:
-            source =f"{OMARCHY}/blob/{commit}/themes/{theme.name}/backgrounds/{picture.name}"
+            license, where = credit
             opacity = veiled_at(staged / picture.name, tomllib.loads(body).get("background"))
             notes.append(f"Wallpaper at opacity {opacity}")
             lines += [
@@ -412,9 +486,10 @@ def stage_omarchy(omarchy, theme, template, commit, work, notes):
                 "[wallpaper]",
                 f"file = {json.dumps(picture.name)}",
                 f"opacity = {opacity}",
-                'license = "MIT"',
-                f"source = {json.dumps(source)}",
             ]
+            if license:
+                lines.append(f"license = {json.dumps(license)}")
+            lines.append(f"source = {json.dumps(where + picture.name)}")
     (staged / FILE).write_text("\n".join(lines) + "\n")
     return staged
 
@@ -505,6 +580,132 @@ def omarchy_themes(omarchy):
         yield theme, commit, updated
 
 
+# -- omarchy's community -------------------------------------------------------
+
+
+@dataclass
+class Listed:
+    """A theme omarchy's site lists from its community."""
+
+    repo: str  # owner/name on GitHub
+    slug: str  # what the site calls its picture, and the theme's name here
+    title: str
+
+
+def community(site):
+    """Every theme the site's list names, in its order."""
+    text = (Path(site) / SITE_LIST).read_text(encoding="utf-8")
+    found = [Listed(repo, slug, title.strip()) for repo, slug, title in SITE_THEME.findall(text)]
+    # A figure the pattern does not read is the site having changed shape:
+    # said, rather than a theme quietly not listed.
+    figures = text.count(SITE_FIGURE)
+    if figures != len(found):
+        raise Refused(f"{SITE_LIST} has {figures} themes and {len(found)} of them could be read")
+    return found
+
+
+def github(path):
+    """What GitHub's API says at `path`, with the run's token where there is
+    one -- a run asks once a theme, which is more than an hour allows a
+    caller with none."""
+    request = urllib.request.Request(f"https://api.github.com/{path}")
+    request.add_header("Accept", "application/vnd.github+json")
+    if os.environ.get("GITHUB_TOKEN"):
+        request.add_header("Authorization", f"Bearer {os.environ['GITHUB_TOKEN']}")
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.load(response)
+
+
+def fetched(url):
+    """The bytes at `url`."""
+    try:
+        with urllib.request.urlopen(url, timeout=120) as response:
+            return response.read()
+    except OSError as error:
+        raise Refused(f"Could not fetch {url}: {error}")
+
+
+def stage_community(listed, omarchy, template, known, work, notes):
+    """One community theme made into an Obelus theme the way omarchy's are,
+    from its author's repository as it is now: the staged theme, its commit
+    and day, the picture Obelus is to fetch where it is not packed, and
+    where to see the picture.
+
+    The picture is read from where Obelus will fetch it, not from the
+    clone, so that the address the index gives is one that answered with
+    these bytes."""
+    name = PREFIX + listed.slug
+    try:
+        about = github(f"repos/{listed.repo}")
+    except OSError as error:
+        raise Refused(f"GitHub says nothing of {listed.repo}: {error}")
+    repo = about["full_name"]  # where a repository that was renamed is now
+    checkout = work / "checkouts" / name
+    # The commit and its tree and none of the blobs: the palette and one
+    # picture are all that is read, and both are fetched on their own --
+    # a shallow clone without blobs cannot fetch one it is missing.
+    try:
+        run("git", "clone", "-q", "--depth", "1", "--filter=blob:none", "--no-checkout",
+            f"https://github.com/{repo}", checkout)
+    except subprocess.CalledProcessError as error:
+        raise Refused(f"Could not clone {repo}: {error.stderr.strip()}")
+    commit = run("git", "rev-parse", "HEAD", cwd=checkout).strip()
+    updated = run("git", "show", "-s", "--format=%cs", commit, cwd=checkout).strip()
+    raw = f"https://raw.githubusercontent.com/{repo}/{commit}"
+    if not run("git", "ls-tree", "--name-only", "HEAD", "colors.toml", cwd=checkout).strip():
+        raise Refused(f"{repo} has no colors.toml at its top")
+    (checkout / "colors.toml").write_bytes(fetched(f"{raw}/colors.toml"))
+    # Unquoted, whatever the names are written in.
+    pictures = sorted(
+        path
+        for path in run("git", "ls-tree", "-z", "--name-only", "HEAD", "backgrounds/", cwd=checkout).split("\0")
+        if Path(path).suffix.lower() in PICTURES
+    )
+    license = (about.get("license") or {}).get("spdx_id") or ""
+    whole = license in known
+    picture = url = None
+    if pictures:
+        url = f"{raw}/{urllib.parse.quote(pictures[0])}"
+        picture = work / "pictures" / name / Path(pictures[0]).name
+        picture.parent.mkdir(parents=True)
+        picture.write_bytes(fetched(url))
+    staged = stage_palette(
+        omarchy,
+        name,
+        checkout / "colors.toml",
+        template,
+        [
+            f"# Made by the Obelus registry from {listed.title}, a theme omarchy's",
+            f"# site lists from its community, as github.com/{repo} had it at",
+            f"# {commit}, through Obelus's contrib/omarchy/obelus.toml.tpl.",
+        ],
+        (repo.split("/")[0], f"The {listed.title} theme from omarchy's community"),
+        picture,
+        (license if whole else "", f"https://github.com/{repo}/blob/{commit}/backgrounds/"),
+        work,
+        notes,
+        whole=whole,
+    )
+    fetch = None
+    if picture and not whole and (staged / picture.name).is_file():
+        notes.append("Wallpaper fetched from its author, who gives no licence")
+        fetch = {"url": url, "sha256": hashlib.sha256(picture.read_bytes()).hexdigest()}
+    return staged, commit, updated, fetch, url or ""
+
+
+def still_there(line):
+    """Whether a published community theme's picture, where Obelus fetches
+    it, is still the picture the index says -- for carrying one over in a
+    run that could not make it again."""
+    wallpaper = line.get("wallpaper") or {}
+    if not wallpaper.get("url"):
+        return True
+    try:
+        return hashlib.sha256(fetched(wallpaper["url"])).hexdigest() == wallpaper.get("sha256")
+    except Refused:
+        return False
+
+
 # -- the site ----------------------------------------------------------------
 
 
@@ -587,6 +788,50 @@ def build(arguments):
                     kept = carried(line, old, out)
                     if kept:
                         made[name] = kept
+
+        listing, community_refused = None, {}
+        if arguments.site and arguments.omarchy and Path(arguments.omarchy, "themes").is_dir():
+            try:
+                listing = community(arguments.site)
+            except (OSError, Refused) as why:
+                print(f"::warning::Not reading omarchy's community: {why}")
+        if listing is not None:
+            omarchy = Path(arguments.omarchy)
+            # Taken before the threads start, which `made` is written under.
+            shipped = set(made)
+
+            def make(listed):
+                name = PREFIX + listed.slug
+                if name in shipped:
+                    return name, None, f"omarchy ships a theme called {name}, which is the one listed"
+                notes = []
+                try:
+                    staged, commit, updated, fetch, picture = stage_community(
+                        listed, omarchy, template, known, work, notes)
+                    line = finish(staged, name, "omarchy-community", commit, updated, out,
+                                  arguments.check_theme, known, strict=True, fetched=fetch)
+                    return name, Made(line, "made", picture, notes), None
+                except Refused as why:
+                    return name, None, str(why)
+                except (subprocess.CalledProcessError, OSError, ValueError, KeyError) as error:
+                    # Somebody else's repository, in a shape nothing here
+                    # foresaw: that theme is left out, not the run failed.
+                    return name, None, f"{type(error).__name__}: {error}"
+
+            # Each theme has directories of its own under `work`, so they
+            # are made side by side; most of the time is the network's.
+            with ThreadPoolExecutor(AT_ONCE) as pool:
+                for name, kept, why in pool.map(make, listing):
+                    if kept:
+                        made[name] = kept
+                    else:
+                        community_refused[name] = why
+        else:
+            for name, line in before.items():
+                if line.get("group") == "omarchy-community" and still_there(line):
+                    kept = carried(line, old, out)
+                    if kept:
+                        made[name] = kept
     finally:
         shutil.rmtree(work, ignore_errors=True)
 
@@ -597,7 +842,7 @@ def build(arguments):
     (out / "index.json").write_text(
         json.dumps({"themes": lines}, indent=1, ensure_ascii=False) + "\n"
     )
-    summary = summarise(made, refused, omarchy_refused, before)
+    summary = summarise(made, refused, omarchy_refused, community_refused, before)
     print(summary)
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as file:
@@ -605,7 +850,7 @@ def build(arguments):
     return 1 if refused else 0
 
 
-def summarise(made, refused, omarchy_refused, before):
+def summarise(made, refused, omarchy_refused, community_refused, before):
     rows = ["## Themes", ""]
     if refused:
         rows += ["### Refused", ""]
@@ -618,8 +863,8 @@ def summarise(made, refused, omarchy_refused, before):
         for name, kept in sorted(fresh.items()):
             line = kept.record
             wallpaper = line.get("wallpaper")
-            picture = (f"{wallpaper['license']}, [source]({wallpaper['source']})"
-                       if wallpaper else "None")
+            picture = (f"{wallpaper.get('license') or 'Fetched from its author'}, "
+                       f"[source]({wallpaper['source']})" if wallpaper else "None")
             if kept.picture and kept.picture.startswith("https://raw.githubusercontent.com/"):
                 picture += f"<br><img src=\"{kept.picture}\" width=\"240\">"
             notes = "".join(f"<br>{note}" for note in kept.notes)
@@ -632,6 +877,11 @@ def summarise(made, refused, omarchy_refused, before):
         rows += ["### omarchy themes left out", ""]
         for name, why in sorted(omarchy_refused.items()):
             rows.append(f"- **{name}**: {why}")
+        rows.append("")
+    if community_refused:
+        rows += ["### Community themes left out", ""]
+        for name, why in sorted(community_refused.items()):
+            rows.append(f"- **{name}**: {why.splitlines()[0] if why else why}")
         rows.append("")
     rows.append(f"{len(made)} themes listed, {sum(k.how == 'carried' for k in made.values())} carried over unchanged.")
     return "\n".join(rows)
@@ -646,6 +896,7 @@ def main():
     building.add_argument("--check-theme", required=True, help="the obelus-check-theme binary")
     building.add_argument("--template", required=True, help="Obelus's contrib/omarchy/obelus.toml.tpl")
     building.add_argument("--omarchy", help="a clone of basecamp/omarchy, with its history")
+    building.add_argument("--site", help="a clone of omacom/omarchy-site, for its community's list")
     arguments = parser.parse_args()
     sys.exit(build(arguments))
 
