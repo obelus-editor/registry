@@ -22,7 +22,8 @@ nothing and the bytes come out the same when nothing changed. Without
 The community's are made again on every run too, from each author's
 repository as it is now -- which is also how a theme whose repository or
 picture has gone stops being listed: it is not made, so it is not in the
-index. Their list is themes/index.html in omarchy's site (--site), read from
+index. Gone means GitHub said so; a timeout, a server error or a limit says
+nothing about the theme, and keeps it as it was published. Their list is themes/index.html in omarchy's site (--site), read from
 a clone of it rather than from the page, because that file is the list --
 contributors add a theme to it by a pull request -- and the page is only
 what it renders to.
@@ -44,6 +45,8 @@ left out, because nobody here asked for it.
 import argparse
 import gzip
 import hashlib
+import html
+import http.client
 import io
 import json
 import os
@@ -84,6 +87,10 @@ SITE_THEME = re.compile(
 )
 # How many authors' repositories are read at once.
 AT_ONCE = 8
+# How long one clone of an author's repository -- a commit and its tree,
+# no blobs -- may take before it is given up on, so that one that hangs
+# does not hold the run until GitHub's own limit.
+CLONE_PATIENCE = 300
 # How much of the page covers an omarchy picture, at most. Higher than
 # Obelus's own default: omarchy's pictures are a desktop's -- bright and
 # busy -- and at the default they are heavier under code than a picture
@@ -121,6 +128,12 @@ class Refused(Exception):
     """A theme that may not be listed, and why."""
 
 
+class Unreachable(Exception):
+    """A theme that could not be made this run for a reason that is the
+    network's rather than the theme's -- a timeout, a server error, a limit
+    -- so what was published is kept rather than taken away."""
+
+
 @dataclass
 class Made:
     """A theme on the site: its line in the index, and how it got there."""
@@ -131,9 +144,10 @@ class Made:
     notes: list = field(default_factory=list)
 
 
-def run(*args, cwd=None):
+def run(*args, cwd=None, timeout=None):
     return subprocess.run(
-        [str(arg) for arg in args], cwd=cwd, check=True, capture_output=True, text=True
+        [str(arg) for arg in args], cwd=cwd, check=True, capture_output=True, text=True,
+        timeout=timeout,
     ).stdout
 
 
@@ -436,7 +450,8 @@ def stage_omarchy(omarchy, theme, template, commit, work, notes):
         ],
         ("omarchy", f"The {theme.name} theme from omarchy"),
         pictures[0] if pictures else None,
-        ("MIT", f"{OMARCHY}/blob/{commit}/themes/{theme.name}/backgrounds/"),
+        ("MIT", f"{OMARCHY}/blob/{commit}/themes/{theme.name}/backgrounds/{pictures[0].name}"
+         if pictures else ""),
         work,
         notes,
     )
@@ -448,7 +463,7 @@ def stage_palette(omarchy, name, colors, template, header, about, picture, credi
     from it through omarchy's resolver, and `picture` as its wallpaper.
 
     `credit` is the picture's licence -- empty for one nobody may hand on --
-    and the directory it came from, to which its file's name is added. A
+    and where it came from. A
     picture that is not `whole` is its author's to hand on and not this
     registry's: it is not made smaller, because a smaller one would be a
     copy, and it is beside the theme only to be checked and measured."""
@@ -478,7 +493,7 @@ def stage_palette(omarchy, name, colors, template, header, about, picture, credi
             (staged / picture.name).unlink()
             notes.append(f"No wallpaper: {'; '.join(problems)}")
         else:
-            license, where = credit
+            license, source = credit
             opacity = veiled_at(staged / picture.name, tomllib.loads(body).get("background"))
             notes.append(f"Wallpaper at opacity {opacity}")
             lines += [
@@ -489,7 +504,7 @@ def stage_palette(omarchy, name, colors, template, header, about, picture, credi
             ]
             if license:
                 lines.append(f"license = {json.dumps(license)}")
-            lines.append(f"source = {json.dumps(where + picture.name)}")
+            lines.append(f"source = {json.dumps(source)}")
     (staged / FILE).write_text("\n".join(lines) + "\n")
     return staged
 
@@ -595,13 +610,34 @@ class Listed:
 def community(site):
     """Every theme the site's list names, in its order."""
     text = (Path(site) / SITE_LIST).read_text(encoding="utf-8")
-    found = [Listed(repo, slug, title.strip()) for repo, slug, title in SITE_THEME.findall(text)]
+    # The title is HTML: `All Hallow&#39;s Eve`.
+    found = [
+        Listed(repo, slug, html.unescape(title).strip())
+        for repo, slug, title in SITE_THEME.findall(text)
+    ]
     # A figure the pattern does not read is the site having changed shape:
     # said, rather than a theme quietly not listed.
     figures = text.count(SITE_FIGURE)
     if figures != len(found):
         raise Refused(f"{SITE_LIST} has {figures} themes and {len(found)} of them could be read")
     return found
+
+
+def asked(request, read):
+    """`read` of what `request` answers -- Refused where the answer is that
+    it is not there, and Unreachable where there was no answer to speak of:
+    a timeout, a server error or a limit says nothing about the theme."""
+    try:
+        with urllib.request.urlopen(request, timeout=120) as response:
+            return read(response)
+    except urllib.error.HTTPError as error:
+        if error.code in (404, 410, 451):
+            raise Refused(f"{error.url} is not there: {error}")
+        raise Unreachable(f"{error.url}: {error}")
+    except (OSError, http.client.HTTPException, ValueError) as error:
+        # A connection that closes half way raises an HTTPException, which
+        # is not an OSError; a body cut off is not JSON, which is a ValueError.
+        raise Unreachable(f"{getattr(request, 'full_url', request)}: {type(error).__name__}: {error}")
 
 
 def github(path):
@@ -612,17 +648,12 @@ def github(path):
     request.add_header("Accept", "application/vnd.github+json")
     if os.environ.get("GITHUB_TOKEN"):
         request.add_header("Authorization", f"Bearer {os.environ['GITHUB_TOKEN']}")
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return json.load(response)
+    return asked(request, json.load)
 
 
 def fetched(url):
     """The bytes at `url`."""
-    try:
-        with urllib.request.urlopen(url, timeout=120) as response:
-            return response.read()
-    except OSError as error:
-        raise Refused(f"Could not fetch {url}: {error}")
+    return asked(url, lambda response: response.read())
 
 
 def stage_community(listed, omarchy, template, known, work, notes):
@@ -635,10 +666,7 @@ def stage_community(listed, omarchy, template, known, work, notes):
     clone, so that the address the index gives is one that answered with
     these bytes."""
     name = PREFIX + listed.slug
-    try:
-        about = github(f"repos/{listed.repo}")
-    except OSError as error:
-        raise Refused(f"GitHub says nothing of {listed.repo}: {error}")
+    about = github(f"repos/{listed.repo}")
     repo = about["full_name"]  # where a repository that was renamed is now
     checkout = work / "checkouts" / name
     # The commit and its tree and none of the blobs: the palette and one
@@ -646,9 +674,12 @@ def stage_community(listed, omarchy, template, known, work, notes):
     # a shallow clone without blobs cannot fetch one it is missing.
     try:
         run("git", "clone", "-q", "--depth", "1", "--filter=blob:none", "--no-checkout",
-            f"https://github.com/{repo}", checkout)
+            f"https://github.com/{repo}", checkout, timeout=CLONE_PATIENCE)
+    except subprocess.TimeoutExpired:
+        raise Refused(f"Cloning {repo} took longer than {CLONE_PATIENCE} seconds")
     except subprocess.CalledProcessError as error:
-        raise Refused(f"Could not clone {repo}: {error.stderr.strip()}")
+        # GitHub has just said the repository is there.
+        raise Unreachable(f"Could not clone {repo}: {error.stderr.strip()}")
     commit = run("git", "rev-parse", "HEAD", cwd=checkout).strip()
     updated = run("git", "show", "-s", "--format=%cs", commit, cwd=checkout).strip()
     raw = f"https://raw.githubusercontent.com/{repo}/{commit}"
@@ -666,7 +697,13 @@ def stage_community(listed, omarchy, template, known, work, notes):
     picture = url = None
     if pictures:
         url = f"{raw}/{urllib.parse.quote(pictures[0])}"
-        picture = work / "pictures" / name / Path(pictures[0]).name
+        # The name it has in the theme's directory, which is the theme's
+        # business and not the author's: Obelus will not make a file of a
+        # name like `Atelier Estuary.png`, and would leave the theme out.
+        local = Path(pictures[0]).name
+        if not NAME.fullmatch(local):
+            local = "wallpaper" + Path(local).suffix.lower()
+        picture = work / "pictures" / name / local
         picture.parent.mkdir(parents=True)
         picture.write_bytes(fetched(url))
     staged = stage_palette(
@@ -681,7 +718,8 @@ def stage_community(listed, omarchy, template, known, work, notes):
         ],
         (repo.split("/")[0], f"The {listed.title} theme from omarchy's community"),
         picture,
-        (license if whole else "", f"https://github.com/{repo}/blob/{commit}/backgrounds/"),
+        (license if whole else "",
+         f"https://github.com/{repo}/blob/{commit}/{urllib.parse.quote(pictures[0])}" if pictures else ""),
         work,
         notes,
         whole=whole,
@@ -704,6 +742,9 @@ def still_there(line):
         return hashlib.sha256(fetched(wallpaper["url"])).hexdigest() == wallpaper.get("sha256")
     except Refused:
         return False
+    except Unreachable:
+        # Not known to have gone: the next run asks again.
+        return True
 
 
 # -- the site ----------------------------------------------------------------
@@ -789,7 +830,7 @@ def build(arguments):
                     if kept:
                         made[name] = kept
 
-        listing, community_refused = None, {}
+        listing, community_refused, community_kept = None, {}, {}
         if arguments.site and arguments.omarchy and Path(arguments.omarchy, "themes").is_dir():
             try:
                 listing = community(arguments.site)
@@ -813,15 +854,25 @@ def build(arguments):
                     return name, Made(line, "made", picture, notes), None
                 except Refused as why:
                     return name, None, str(why)
-                except (subprocess.CalledProcessError, OSError, ValueError, KeyError) as error:
+                except Unreachable as why:
+                    # Kept as published, which is copied on the main thread.
+                    return name, "unreachable", str(why)
+                except Exception as error:  # noqa: BLE001
                     # Somebody else's repository, in a shape nothing here
-                    # foresaw: that theme is left out, not the run failed.
+                    # foresaw -- a picture too large to decode, say: that
+                    # theme is left out, and the run goes on.
                     return name, None, f"{type(error).__name__}: {error}"
 
             # Each theme has directories of its own under `work`, so they
             # are made side by side; most of the time is the network's.
             with ThreadPoolExecutor(AT_ONCE) as pool:
                 for name, kept, why in pool.map(make, listing):
+                    if kept == "unreachable":
+                        line = before.get(name)
+                        kept = carried(line, old, out) if line and line.get("group") == "omarchy-community" else None
+                        if kept:
+                            kept.notes.append(f"Kept as published: {why}")
+                            community_kept[name] = why
                     if kept:
                         made[name] = kept
                     else:
@@ -842,7 +893,7 @@ def build(arguments):
     (out / "index.json").write_text(
         json.dumps({"themes": lines}, indent=1, ensure_ascii=False) + "\n"
     )
-    summary = summarise(made, refused, omarchy_refused, community_refused, before)
+    summary = summarise(made, refused, omarchy_refused, community_refused, community_kept, before)
     print(summary)
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as file:
@@ -850,7 +901,7 @@ def build(arguments):
     return 1 if refused else 0
 
 
-def summarise(made, refused, omarchy_refused, community_refused, before):
+def summarise(made, refused, omarchy_refused, community_refused, community_kept, before):
     rows = ["## Themes", ""]
     if refused:
         rows += ["### Refused", ""]
@@ -881,6 +932,11 @@ def summarise(made, refused, omarchy_refused, community_refused, before):
     if community_refused:
         rows += ["### Community themes left out", ""]
         for name, why in sorted(community_refused.items()):
+            rows.append(f"- **{name}**: {why.splitlines()[0] if why else why}")
+        rows.append("")
+    if community_kept:
+        rows += ["### Community themes kept as published", ""]
+        for name, why in sorted(community_kept.items()):
             rows.append(f"- **{name}**: {why.splitlines()[0] if why else why}")
         rows.append("")
     rows.append(f"{len(made)} themes listed, {sum(k.how == 'carried' for k in made.values())} carried over unchanged.")

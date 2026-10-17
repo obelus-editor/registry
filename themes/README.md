@@ -112,11 +112,14 @@ it depends on whether the author said anyone may copy it:
   picture's address in the author's repository at the commit read, and what
   it hashes to, and Obelus fetches it from there when the theme is
   installed. It is never made smaller, because a smaller copy is still a
-  copy. An install whose picture is gone, or is no longer those bytes,
+  copy. A picture whose name Obelus would not make a file of
+  (`Atelier Estuary.png`) is called `wallpaper.png` in the theme. An install whose picture is gone, or is no longer those bytes,
   fails whole.
 
 A theme whose repository or picture has gone is not made on the next run,
-so it is no longer listed. Without a clone of the site, the ones published
+so it is no longer listed. Gone means GitHub answered that it is not there;
+a timeout, a server error or a rate limit keeps the theme as it was
+published until a run can ask again. Without a clone of the site, the ones published
 are carried over -- those with a fetched picture only while it still hashes
 to what the index says. Older Obelus does not know this group and does not
 show it.
