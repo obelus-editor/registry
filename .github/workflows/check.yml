@@ -27,9 +27,14 @@ jobs:
             "https://github.com/${{ github.repository }}" .work/old || mkdir -p .work/old
 
       - name: Themes
+        env:
+          # A question to GitHub's API for each community theme, which is
+          # more than an hour allows a caller with no token.
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           omarchy=()
           [ -d .work/omarchy ] && omarchy=(--omarchy .work/omarchy)
+          [ -f .work/omarchy-site/themes/index.html ] && omarchy+=(--site .work/omarchy-site)
           python scripts/themes.py build \
             --old .work/old --out .work/site \
             --check-theme ~/.cargo/bin/obelus-check-theme \
