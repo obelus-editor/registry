@@ -73,7 +73,7 @@ From this registry:
   `omarchy-`;
 - `commit` is a whole commit, not a branch or a tag;
 - `[about]` has an `author` and a `description`;
-- a wallpaper is a jpg, png or webp, at most 3840 pixels a side and 5 MB,
+- a wallpaper is a jpg, png or webp, at most 3840 pixels a side and 25 MB,
   with an SPDX `license` and a `source`;
 - the directory holds `theme.toml`, its wallpaper, and nothing else.
 
