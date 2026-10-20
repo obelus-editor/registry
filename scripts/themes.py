@@ -114,7 +114,12 @@ NAME = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_.-]*")
 COMMIT = re.compile(r"[0-9a-f]{40}")
 PICTURES = {".jpg", ".jpeg", ".png", ".webp"}
 LARGEST_SIDE = 3840
-LARGEST_FILE = 5 * 1024 * 1024
+# As large as a picture at the largest side can honestly be: a 3840 by 2160
+# PNG of a photograph is about 25 MB. At 5 MB a picture already at the
+# largest side was left out whole, because making it smaller makes it no
+# smaller -- moodpeak's 7.7 MB first picture was. Obelus reads none of this:
+# it draws a picture no larger than the screen whatever the file weighs.
+LARGEST_FILE = 25 * 1024 * 1024
 # The built-in themes with a light page, which a theme building on one is
 # too. Obelus's `obelus_theme::builtin::ALL`; a built-in added there with a
 # light page belongs here.
@@ -251,7 +256,7 @@ def picture_rules(path):
     if path.suffix.lower() not in PICTURES:
         problems.append(f"{path.name}: a wallpaper is a jpg, a png or a webp")
     if path.stat().st_size > LARGEST_FILE:
-        problems.append(f"{path.name}: a wallpaper is at most 5 MB")
+        problems.append(f"{path.name}: a wallpaper is at most 25 MB")
     try:
         with Image.open(path) as picture:
             width, height = picture.size
