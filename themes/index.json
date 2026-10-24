@@ -1,0 +1,2565 @@
+{
+ "themes": [
+  {
+   "name": "omarchy-catppuccin",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The catppuccin theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/c1096aa36f50f864735a39117913626b3c10ccae/themes/catppuccin/backgrounds/1-totoro.webp"
+   },
+   "package": "omarchy-catppuccin-c1096aa36f50.tar.gz",
+   "sha256": "564c38329714ebc014a2a121eeb8d8f98e27532a99b418db61a498ee21413105",
+   "commit": "c1096aa36f50f864735a39117913626b3c10ccae",
+   "updated": "2026-10-11"
+  },
+  {
+   "name": "omarchy-catppuccin-latte",
+   "group": "omarchy",
+   "mode": "light",
+   "author": "omarchy",
+   "description": "The catppuccin-latte theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/81504b08e0fdfc411e07bb0395d6d9347e1cf020/themes/catppuccin-latte/backgrounds/1-color-fade.webp"
+   },
+   "package": "omarchy-catppuccin-latte-81504b08e0fd.tar.gz",
+   "sha256": "b933e2d6e6f3b5cc67bcb42aced926f7d1277a71384c356263e5853dd2eacaa4",
+   "commit": "81504b08e0fdfc411e07bb0395d6d9347e1cf020",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-ethereal",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The ethereal theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/ethereal/backgrounds/1-cosmic.webp"
+   },
+   "package": "omarchy-ethereal-32481c89ed70.tar.gz",
+   "sha256": "4d8f67413be77d387d2d83d41867d92891d61de0ede10156daf3478051fdec94",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-everforest",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The everforest theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/81504b08e0fdfc411e07bb0395d6d9347e1cf020/themes/everforest/backgrounds/1-tree-tops.webp"
+   },
+   "package": "omarchy-everforest-81504b08e0fd.tar.gz",
+   "sha256": "c521ff355a20c26976579f047ba7a3d71b6305cfc74c3c7571aeaa46ee66ef36",
+   "commit": "81504b08e0fdfc411e07bb0395d6d9347e1cf020",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-flexoki-light",
+   "group": "omarchy",
+   "mode": "light",
+   "author": "omarchy",
+   "description": "The flexoki-light theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/ecf0eb362283efad6404b939981c7ef8d58039b3/themes/flexoki-light/backgrounds/1-orb.webp"
+   },
+   "package": "omarchy-flexoki-light-ecf0eb362283.tar.gz",
+   "sha256": "d106cbbfef2111003cac3c2df175226207ec3291fa4ee8301be6a03d6ad14119",
+   "commit": "ecf0eb362283efad6404b939981c7ef8d58039b3",
+   "updated": "2026-10-14"
+  },
+  {
+   "name": "omarchy-gruvbox",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The gruvbox theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/gruvbox/backgrounds/1-the-backwater.jpg"
+   },
+   "package": "omarchy-gruvbox-32481c89ed70.tar.gz",
+   "sha256": "b62a270c3efa096ccf178efc675b5192525eedbe876dd664d967d94cc527194f",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-hackerman",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The hackerman theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/hackerman/backgrounds/1-synth-scape.jpg"
+   },
+   "package": "omarchy-hackerman-32481c89ed70.tar.gz",
+   "sha256": "914a3956efec803d7f19058dfd8d562a0728f83ffe8a2d48e00356903a996a83",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-kanagawa",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The kanagawa theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/kanagawa/backgrounds/1-kanagawa.jpg"
+   },
+   "package": "omarchy-kanagawa-32481c89ed70.tar.gz",
+   "sha256": "fc588c198f0c6f250c524bd42a34c7c086b0ccae7ee2fa5fffc9eef8f594c626",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-last-horizon",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The last-horizon theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/last-horizon/backgrounds/1-eyes-wide.webp"
+   },
+   "package": "omarchy-last-horizon-32481c89ed70.tar.gz",
+   "sha256": "a56da68172669d3b7a6b072f9375e22a906f6dfa9254025b6baec363d75451aa",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-lumon",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The lumon theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/c1096aa36f50f864735a39117913626b3c10ccae/themes/lumon/backgrounds/01-united-in-severance.webp"
+   },
+   "package": "omarchy-lumon-c1096aa36f50.tar.gz",
+   "sha256": "38b4f5d3240e8e030b4084025a628a67949fc24bfad444cf48dfbb3620c77a93",
+   "commit": "c1096aa36f50f864735a39117913626b3c10ccae",
+   "updated": "2026-10-11"
+  },
+  {
+   "name": "omarchy-lupine",
+   "group": "omarchy",
+   "mode": "light",
+   "author": "omarchy",
+   "description": "The lupine theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/lupine/backgrounds/01-cherry-blossom-bokeh.webp"
+   },
+   "package": "omarchy-lupine-32481c89ed70.tar.gz",
+   "sha256": "b84898859f57912ce222ee9daaaba94048540974cceba6f72616c1201562f158",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-matte-black",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The matte-black theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/matte-black/backgrounds/0-ship-at-sea.jpg"
+   },
+   "package": "omarchy-matte-black-32481c89ed70.tar.gz",
+   "sha256": "2b664b8a47292830c8d88e2eabcda11af9003c261657193afbcbb0d11072c37f",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-miasma",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The miasma theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/miasma/backgrounds/01-nature-of-fear.webp"
+   },
+   "package": "omarchy-miasma-32481c89ed70.tar.gz",
+   "sha256": "f0167904166e8061ae8124cb3c92756586f2c58a4064862e934434d1a6110852",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-nord",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The nord theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/nord/backgrounds/0-black-moon.jpg"
+   },
+   "package": "omarchy-nord-32481c89ed70.tar.gz",
+   "sha256": "e75a6203439175f98ad5aab49825975399a29f6ee1dd67ce94ef5fbddbb51f6b",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-osaka-jade",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The osaka-jade theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/osaka-jade/backgrounds/1-glowing-city.webp"
+   },
+   "package": "omarchy-osaka-jade-32481c89ed70.tar.gz",
+   "sha256": "84fccc7fce150884f42faeff6f845e958c9087026e2d0ae4e238e2d369299836",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-retro-82",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The retro-82 theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/retro-82/backgrounds/1-in-the-groove.webp"
+   },
+   "package": "omarchy-retro-82-32481c89ed70.tar.gz",
+   "sha256": "c5b4a8551104598059238058a295b2362fb8c28f21f96fdf2a34fd2cea98797e",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-ristretto",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The ristretto theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/ristretto/backgrounds/0-launch.webp"
+   },
+   "package": "omarchy-ristretto-32481c89ed70.tar.gz",
+   "sha256": "043605fa4f93ef6bd56e69ffa719ceb91bfb1d86eb9803d84b93cf1ab3dd6263",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-rose-pine",
+   "group": "omarchy",
+   "mode": "light",
+   "author": "omarchy",
+   "description": "The rose-pine theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/rose-pine/backgrounds/1-funky-shapes.webp"
+   },
+   "package": "omarchy-rose-pine-32481c89ed70.tar.gz",
+   "sha256": "d2d4948ffbc967e3b2f47a6d65f29d07bbfe7e28b10cb823216460e2c29a2cd3",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-solitude",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The solitude theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/solitude/backgrounds/1-on-pole.webp"
+   },
+   "package": "omarchy-solitude-32481c89ed70.tar.gz",
+   "sha256": "c644601159fc9aae2a92d052aa015a859282c8e93ab6ce7b5a02e24bfc973d2a",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-starship",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The starship theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/c1096aa36f50f864735a39117913626b3c10ccae/themes/starship/backgrounds/1-starbase.webp"
+   },
+   "package": "omarchy-starship-c1096aa36f50.tar.gz",
+   "sha256": "56a443793f199b445ec11f10d8336ac791a2c0e3dc558bb418cc3713dc1c6bb2",
+   "commit": "c1096aa36f50f864735a39117913626b3c10ccae",
+   "updated": "2026-10-11"
+  },
+  {
+   "name": "omarchy-tokyo-night",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The tokyo-night theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/097c733fc6f24cd437028e0233910b7143fe83f7/themes/tokyo-night/backgrounds/0-liftoff.webp"
+   },
+   "package": "omarchy-tokyo-night-097c733fc6f2.tar.gz",
+   "sha256": "08e317d476fa1e2a80cde4d542f2d74a9e46997d7e47ef1b5cfdec23ed75ca08",
+   "commit": "097c733fc6f24cd437028e0233910b7143fe83f7",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-vantablack",
+   "group": "omarchy",
+   "mode": "dark",
+   "author": "omarchy",
+   "description": "The vantablack theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/vantablack/backgrounds/0-dot-hands.webp"
+   },
+   "package": "omarchy-vantablack-32481c89ed70.tar.gz",
+   "sha256": "764bacaba72c68b4a1e6719c5fe6c1710a5cdd14ca327e0cb1bb48b2d596cf8c",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-white",
+   "group": "omarchy",
+   "mode": "light",
+   "author": "omarchy",
+   "description": "The white theme from omarchy",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/basecamp/omarchy/blob/32481c89ed70ced37a9f5b3c7bc48e8d867024cf/themes/white/backgrounds/1-white.webp"
+   },
+   "package": "omarchy-white-32481c89ed70.tar.gz",
+   "sha256": "c1bb55ff361c1a1f2f5c1dbda891ed776518f0ae9f889aea1d48a70a5b7dfddd",
+   "commit": "32481c89ed70ced37a9f5b3c7bc48e8d867024cf",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-abyssal-cartographer",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "leaflessbranch",
+   "description": "The Abyssal Cartographer theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/leaflessbranch/omarchy-abyssal-cartographer-theme/blob/6236bb6ad16e7c00935ac2a729497eac82bcb938/backgrounds/02-thermal-plain.webp"
+   },
+   "package": "omarchy-abyssal-cartographer-6236bb6ad16e.tar.gz",
+   "sha256": "9d9a75993411ca13a7ef25efa4882b5b870821b12567e7d1b75f638a0a630d8f",
+   "commit": "6236bb6ad16e7c00935ac2a729497eac82bcb938",
+   "updated": "2026-08-31"
+  },
+  {
+   "name": "omarchy-aetheria",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "JJDizz1L",
+   "description": "The Aetheria theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/JJDizz1L/aetheria/blob/dcf698e2a16226b8ec8b5a70fe8b1fd153daf0d7/backgrounds/aetheria-1-4k%40.jpg"
+   },
+   "package": "omarchy-aetheria-dcf698e2a162.tar.gz",
+   "sha256": "edb32850bd00da0faf238015272c166d8331abf73a8b742425d1985e15032b75",
+   "commit": "dcf698e2a16226b8ec8b5a70fe8b1fd153daf0d7",
+   "updated": "2026-08-17"
+  },
+  {
+   "name": "omarchy-apollo-after-dark",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "leaflessbranch",
+   "description": "The Apollo After Dark theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/leaflessbranch/omarchy-apollo-after-dark-theme/blob/1739db5d7fe25714347783517e3c0c6f8628718d/backgrounds/02-test-chamber.webp"
+   },
+   "package": "omarchy-apollo-after-dark-1739db5d7fe2.tar.gz",
+   "sha256": "1b06efc832f2b3d542a92c4cfe2e00a6a1b3951a00b729cdaa70f4ef9b7ce2f4",
+   "commit": "1739db5d7fe25714347783517e3c0c6f8628718d",
+   "updated": "2026-08-31"
+  },
+  {
+   "name": "omarchy-arc-blueberry",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "vale-c",
+   "description": "The Arc Blueberry theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/vale-c/omarchy-arc-blueberry/blob/56c0679f161ef7198ba089d070dd8cad0bad5b87/backgrounds/1.png"
+   },
+   "package": "omarchy-arc-blueberry-56c0679f161e.tar.gz",
+   "sha256": "2c23e46239eb0e278ad99b224b16a41b82e85aa8cc2d203d2d871fcffe5f79de",
+   "commit": "56c0679f161ef7198ba089d070dd8cad0bad5b87",
+   "updated": "2026-08-23"
+  },
+  {
+   "name": "omarchy-ash",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bjarneo",
+   "description": "The Ash theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-ash-theme/blob/7f793a2e7bdf2dcf486c7c3253e6bceb756aa188/backgrounds/1-ash.jpg",
+    "file": "1-ash.jpg",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-ash-theme/7f793a2e7bdf2dcf486c7c3253e6bceb756aa188/backgrounds/1-ash.jpg",
+    "sha256": "b2686f4ecfc90f669f04944e4bab0e786bd455daf010fac41fe4140d07a63653"
+   },
+   "package": "omarchy-ash-7f793a2e7bdf.tar.gz",
+   "sha256": "1de913a9b30ec6a27c6c8a58b875b746ad7a259a879187fa50dd58db1a6faba4",
+   "commit": "7f793a2e7bdf2dcf486c7c3253e6bceb756aa188",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-atelier",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "atif-1402",
+   "description": "The Atelier theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/atif-1402/omarchy-atelier-theme/blob/4f68facf7a763aa5ab7fe02867e6b30536428908/backgrounds/Atelier%20Estuary.png",
+    "file": "wallpaper.png",
+    "url": "https://raw.githubusercontent.com/atif-1402/omarchy-atelier-theme/4f68facf7a763aa5ab7fe02867e6b30536428908/backgrounds/Atelier%20Estuary.png",
+    "sha256": "4aab4563bb4f12ca7a72faae6a061d07701c6313bee62df2eca5a27a038d5d13"
+   },
+   "package": "omarchy-atelier-4f68facf7a76.tar.gz",
+   "sha256": "f9713a7d98cf80e5555fb01c9732a1ee7b39898c2b8f078223d142255420dee0",
+   "commit": "4f68facf7a763aa5ab7fe02867e6b30536428908",
+   "updated": "2026-05-22"
+  },
+  {
+   "name": "omarchy-aura",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bjarneo",
+   "description": "The Aura theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-aura-theme/blob/f63d3dbffe844886be1e0fa555d2ddc16b5fa366/backgrounds/1.png",
+    "file": "1.png",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-aura-theme/f63d3dbffe844886be1e0fa555d2ddc16b5fa366/backgrounds/1.png",
+    "sha256": "b27aa479079c534a29b017c8ae7925e9a895ef58520a6aa764102c89b346e30f"
+   },
+   "package": "omarchy-aura-f63d3dbffe84.tar.gz",
+   "sha256": "53123965ba64051549ab848fa4ffd3b694cc8b006d79aba5173d4a5e62832a31",
+   "commit": "f63d3dbffe844886be1e0fa555d2ddc16b5fa366",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-bash-the-linux-boss",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "darwin1811-newdev",
+   "description": "The BASH the Linux Boss theme from omarchy's community",
+   "wallpaper": {
+    "license": "CC-BY-SA-4.0",
+    "source": "https://github.com/darwin1811-newdev/omarchy-bash-the-linux-boss-theme/blob/f3b7147cbf3d6d63baf0850e97617b2f9ac8a14c/backgrounds/01-where-am-i-what-is-here.png"
+   },
+   "package": "omarchy-bash-the-linux-boss-f3b7147cbf3d.tar.gz",
+   "sha256": "71ef4bb1374cd1ad75bccadb3bf22876a5c461b359a794b2779e167cc80266a8",
+   "commit": "f3b7147cbf3d6d63baf0850e97617b2f9ac8a14c",
+   "updated": "2026-09-19"
+  },
+  {
+   "name": "omarchy-batman",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "OldJobobo",
+   "description": "The Batman theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/OldJobobo/omarchy-batman-theme/blob/f7dac498aa3570b13bd10f50657dea4eb92345f8/backgrounds/0-dark-knight-smoke.jpg",
+    "file": "0-dark-knight-smoke.jpg",
+    "url": "https://raw.githubusercontent.com/OldJobobo/omarchy-batman-theme/f7dac498aa3570b13bd10f50657dea4eb92345f8/backgrounds/0-dark-knight-smoke.jpg",
+    "sha256": "3bd890c7733378619cb3874ff218ef01edded6454e6d69365d327015889e6e01"
+   },
+   "package": "omarchy-batman-f7dac498aa35.tar.gz",
+   "sha256": "8ef2b5d9ea9b44693a83879aecff21e523a1a2cd39fe4a73f6761d11c7491f66",
+   "commit": "f7dac498aa3570b13bd10f50657dea4eb92345f8",
+   "updated": "2026-08-11"
+  },
+  {
+   "name": "omarchy-batou",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Batou theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-batou-theme/blob/68af747b5b39839d54a5e5e518dfe25d5a0827bf/backgrounds/BG1-b.png"
+   },
+   "package": "omarchy-batou-68af747b5b39.tar.gz",
+   "sha256": "b2d30d3089777c85caab2c1fe034bd099f4c8522adc0586e5fde2d856cb55a6f",
+   "commit": "68af747b5b39839d54a5e5e518dfe25d5a0827bf",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-biscuit-de-mar-dark",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "OldJobobo",
+   "description": "The Biscuit de Mar Dark theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/OldJobobo/omarchy-biscuit-de-mar-dark-theme/blob/e87f5f2eba826c2a2863ba038fd708a7a38a1016/backgrounds/0-biscuit-logo.png",
+    "file": "0-biscuit-logo.png",
+    "url": "https://raw.githubusercontent.com/OldJobobo/omarchy-biscuit-de-mar-dark-theme/e87f5f2eba826c2a2863ba038fd708a7a38a1016/backgrounds/0-biscuit-logo.png",
+    "sha256": "af832e54147f7dd3065168939e664d9e984dde702725b1d9d69edbb6d5295e27"
+   },
+   "package": "omarchy-biscuit-de-mar-dark-e87f5f2eba82.tar.gz",
+   "sha256": "124697cc717fe78c5cc00c2b725b3e9ec793ae10a807cb22c51af94ea8cf58be",
+   "commit": "e87f5f2eba826c2a2863ba038fd708a7a38a1016",
+   "updated": "2026-08-13"
+  },
+  {
+   "name": "omarchy-black-arch",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "ankur311sudo",
+   "description": "The Black Arch theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/ankur311sudo/black_arch/blob/fe2c966306d1d2ea64973aaea56696bf59db8dbe/backgrounds/1-a.jpg",
+    "file": "1-a.jpg",
+    "url": "https://raw.githubusercontent.com/ankur311sudo/black_arch/fe2c966306d1d2ea64973aaea56696bf59db8dbe/backgrounds/1-a.jpg",
+    "sha256": "89626a0d4c8ecceb2dc7af36b66f98f7ec73edeb34806476f12aac720c800754"
+   },
+   "package": "omarchy-black-arch-fe2c966306d1.tar.gz",
+   "sha256": "371ff7e90c5fa16b9bc68494daf6104d9ef557caec0ce34dc4754f33f022027c",
+   "commit": "fe2c966306d1d2ea64973aaea56696bf59db8dbe",
+   "updated": "2026-08-26"
+  },
+  {
+   "name": "omarchy-black-gold",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Black Gold theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-blackgold-theme/blob/f5c4b0675fdc7b637126b0b3425eb269ebc366fe/backgrounds/BG1-2.jpg"
+   },
+   "package": "omarchy-black-gold-f5c4b0675fdc.tar.gz",
+   "sha256": "4e255e86afa922f82527c23af6dd5578e7f07b3e8b6ab2dc5342856bee5e21b6",
+   "commit": "f5c4b0675fdc7b637126b0b3425eb269ebc366fe",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-black-sand",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "pkovzz",
+   "description": "The Black Sand theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/pkovzz/omarchy-black-sand-theme/blob/d4b77e86095160ea091209524442285f254e3ea8/backgrounds/1-black-shores.webp",
+    "file": "1-black-shores.webp",
+    "url": "https://raw.githubusercontent.com/pkovzz/omarchy-black-sand-theme/d4b77e86095160ea091209524442285f254e3ea8/backgrounds/1-black-shores.webp",
+    "sha256": "7ee71aac8f8023fc14e6141456482b6549872fe05f689e1e2f06451e751cc02e"
+   },
+   "package": "omarchy-black-sand-d4b77e860951.tar.gz",
+   "sha256": "c98d1c0305689c09102ee7ad3bb780c7bd189e35d81e221f720cc9350ff28741",
+   "commit": "d4b77e86095160ea091209524442285f254e3ea8",
+   "updated": "2026-08-28"
+  },
+  {
+   "name": "omarchy-black-turq",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Black Turq theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-blackturq-theme/blob/85b32f217e0303a73cd3973cc89fe16b12480ae0/backgrounds/BG1.jpg"
+   },
+   "package": "omarchy-black-turq-85b32f217e03.tar.gz",
+   "sha256": "7a35e64df9dd82389dc65535fb9570fa928272c1b558c05a10cc49adb6c0c870",
+   "commit": "85b32f217e0303a73cd3973cc89fe16b12480ae0",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-bluedotrb",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "dotsilva",
+   "description": "The bluedotrb theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/dotsilva/omarchy-bluedotrb-theme/blob/2afc3c2d225bbaee9ba4cca8132876047c797d53/backgrounds/be1.jpg"
+   },
+   "package": "omarchy-bluedotrb-2afc3c2d225b.tar.gz",
+   "sha256": "8482d75c53947e1bfdc70582eb603b8fca6936a41cdeb773c75ff352ac62cb8e",
+   "commit": "2afc3c2d225bbaee9ba4cca8132876047c797d53",
+   "updated": "2026-03-04"
+  },
+  {
+   "name": "omarchy-castle-on-a-lake",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "shmall03",
+   "description": "The Castle on a Lake theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/shmall03/omarchy-castle-on-a-lake-theme/blob/ea91f869674eaa73537952c9b19b619316cbacd1/backgrounds/castle-afront-a-mountain-night.jpg"
+   },
+   "package": "omarchy-castle-on-a-lake-ea91f869674e.tar.gz",
+   "sha256": "d6d43f02f5fe23379eb0d431e2cbce8b85d629ce7d7defd53f15e98e9e4dfd00",
+   "commit": "ea91f869674eaa73537952c9b19b619316cbacd1",
+   "updated": "2026-08-26"
+  },
+  {
+   "name": "omarchy-cathedral-of-static",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "leaflessbranch",
+   "description": "The Cathedral of Static theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/leaflessbranch/omarchy-cathedral-of-static-theme/blob/d59bc799674412306fda36d480672a2ece3cdc3e/backgrounds/02-signal-nave.webp"
+   },
+   "package": "omarchy-cathedral-of-static-d59bc7996744.tar.gz",
+   "sha256": "45e18a96c420b0041fe88d844655ff48290b515110570298df7ea3cf89ccbcff",
+   "commit": "d59bc799674412306fda36d480672a2ece3cdc3e",
+   "updated": "2026-08-31"
+  },
+  {
+   "name": "omarchy-catppuccin-mocha-dark",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "Luquatic",
+   "description": "The Catppuccin Mocha Dark theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/Luquatic/omarchy-catppuccin-dark/blob/54b98a5c7302783298df05238ab55f312ec327ea/backgrounds/1-dark-forest.jpg",
+    "file": "1-dark-forest.jpg",
+    "url": "https://raw.githubusercontent.com/Luquatic/omarchy-catppuccin-dark/54b98a5c7302783298df05238ab55f312ec327ea/backgrounds/1-dark-forest.jpg",
+    "sha256": "cd562ac9672dde3c23f7cbf9f9a81be1eb7a4aee16f0fbdaae471921e118f95e"
+   },
+   "package": "omarchy-catppuccin-mocha-dark-54b98a5c7302.tar.gz",
+   "sha256": "6cb27b35fcea749a1068558af4d262b744865451ed42caeb0a298d2c2b618c20",
+   "commit": "54b98a5c7302783298df05238ab55f312ec327ea",
+   "updated": "2026-09-04"
+  },
+  {
+   "name": "omarchy-cga",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "tsak",
+   "description": "The CGA theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/tsak/omarchy-cga-theme/blob/caad08fba7ce36de25c114c6f32c234aef4cff01/backgrounds/01-cga-quattro-car.png"
+   },
+   "package": "omarchy-cga-caad08fba7ce.tar.gz",
+   "sha256": "7982849384ada394daabd1e0c7efa681db115a7eeafa52cd308e8335646eb8fc",
+   "commit": "caad08fba7ce36de25c114c6f32c234aef4cff01",
+   "updated": "2026-10-20"
+  },
+  {
+   "name": "omarchy-cincinnati",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "jkwuc89",
+   "description": "The Cincinnati theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/jkwuc89/omarchy-cincinnati-theme/blob/d89506161928cac5047f2102abe978cb55a5fc33/backgrounds/cincinnati-wallpaper.jpg"
+   },
+   "package": "omarchy-cincinnati-d89506161928.tar.gz",
+   "sha256": "abf478019faef790426ed3ee8fa4815d22d613257a19eef25b71cca32aa3fd1f",
+   "commit": "d89506161928cac5047f2102abe978cb55a5fc33",
+   "updated": "2026-08-26"
+  },
+  {
+   "name": "omarchy-city-783",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "OldJobobo",
+   "description": "The City-783 theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/OldJobobo/omarchy-city-783-theme/blob/a9ef3ae0a2e16ec1e4664a9b7625e5450080059e/backgrounds/0-gasmask-triad.jpg",
+    "file": "0-gasmask-triad.jpg",
+    "url": "https://raw.githubusercontent.com/OldJobobo/omarchy-city-783-theme/a9ef3ae0a2e16ec1e4664a9b7625e5450080059e/backgrounds/0-gasmask-triad.jpg",
+    "sha256": "7cafcaff00ecd18c971590b06a649653701e4505734c5bb0c83cfa9831c50107"
+   },
+   "package": "omarchy-city-783-a9ef3ae0a2e1.tar.gz",
+   "sha256": "8682b6d8020ed367069778c665923ab8f552b16983b76571a72ba95940a3553c",
+   "commit": "a9ef3ae0a2e16ec1e4664a9b7625e5450080059e",
+   "updated": "2026-08-26"
+  },
+  {
+   "name": "omarchy-coaster",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "londospark",
+   "description": "The Coaster theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/londospark/omarchy-coaster-theme/blob/64be7fc44b63ef507956d3f86362c9811887436e/backgrounds/coaster.webp",
+    "file": "coaster.webp",
+    "url": "https://raw.githubusercontent.com/londospark/omarchy-coaster-theme/64be7fc44b63ef507956d3f86362c9811887436e/backgrounds/coaster.webp",
+    "sha256": "2e367f627559f1802527cae6635b83c8fef6cd3e62d0038fb41e13bd2fda308d"
+   },
+   "package": "omarchy-coaster-64be7fc44b63.tar.gz",
+   "sha256": "b0f0fbe6c036bc5d22b09a3f33382e3bca24e5fe6abeec227b656adc92d34d2d",
+   "commit": "64be7fc44b63ef507956d3f86362c9811887436e",
+   "updated": "2026-10-16"
+  },
+  {
+   "name": "omarchy-cobalt2",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "hoblin",
+   "description": "The Cobalt2 theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/hoblin/omarchy-cobalt2-theme/blob/579fb7d8890000d315da9e18da6c0885de008ea3/backgrounds/01_a_car_on_a_road_with_orange_clouds_in_the_sky.jpg",
+    "file": "01_a_car_on_a_road_with_orange_clouds_in_the_sky.jpg",
+    "url": "https://raw.githubusercontent.com/hoblin/omarchy-cobalt2-theme/579fb7d8890000d315da9e18da6c0885de008ea3/backgrounds/01_a_car_on_a_road_with_orange_clouds_in_the_sky.jpg",
+    "sha256": "7ad700c6e4bfb0799eda39221bf0c0738650c5a891056d36956bb46788b8496a"
+   },
+   "package": "omarchy-cobalt2-579fb7d88900.tar.gz",
+   "sha256": "0342ee15eca5e13ea0c972468e31373a6b10a192d81ea4da4dddd7ec3576a455",
+   "commit": "579fb7d8890000d315da9e18da6c0885de008ea3",
+   "updated": "2026-09-05"
+  },
+  {
+   "name": "omarchy-coffee",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "megabyte0x",
+   "description": "The Coffee theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/megabyte0x/omarchy-coffee-theme/blob/5ee3a2ce7519398b7423e11f5a722806087de14f/backgrounds/1-cacao-grove.jpg"
+   },
+   "package": "omarchy-coffee-5ee3a2ce7519.tar.gz",
+   "sha256": "8260c03b0bea48adc594f15d78cc7769722c636be56805deadf693f16351e4e1",
+   "commit": "5ee3a2ce7519398b7423e11f5a722806087de14f",
+   "updated": "2026-08-29"
+  },
+  {
+   "name": "omarchy-coffee-latte",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "megabyte0x",
+   "description": "The Coffee Latte theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/megabyte0x/omarchy-coffee-latte-theme/blob/39d003d9344fe48ec75b5e6490a3f2e63d33cc70/backgrounds/1-plantation-road.jpg"
+   },
+   "package": "omarchy-coffee-latte-39d003d9344f.tar.gz",
+   "sha256": "d988398e24a5a2ef66d89c16056238c72f6737d5edf8ace703928ce1776e6650",
+   "commit": "39d003d9344fe48ec75b5e6490a3f2e63d33cc70",
+   "updated": "2026-08-29"
+  },
+  {
+   "name": "omarchy-commit",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "c0ze",
+   "description": "The Commit theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/c0ze/omarchy-commit-theme/blob/ba19bec9fbf72aff2a6de641a6fe0abb7c5486f7/backgrounds/1-pulse-late-night.webp",
+    "file": "1-pulse-late-night.webp",
+    "url": "https://raw.githubusercontent.com/c0ze/omarchy-commit-theme/ba19bec9fbf72aff2a6de641a6fe0abb7c5486f7/backgrounds/1-pulse-late-night.webp",
+    "sha256": "8422c42a105ca379d865dd9f29eedd4329efde2f9fe806ddf117c94c3912296c"
+   },
+   "package": "omarchy-commit-ba19bec9fbf7.tar.gz",
+   "sha256": "02051a3bfba3aefd70ccf37ac68e3612c8a2842cdb0886e875228c7d2944cb5c",
+   "commit": "ba19bec9fbf72aff2a6de641a6fe0abb7c5486f7",
+   "updated": "2026-09-09"
+  },
+  {
+   "name": "omarchy-cozy-harbor-ae86",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "arsh240311",
+   "description": "The Cozy Harbor AE86 theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/arsh240311/omarchy-cozy-ui/blob/9c863be291dfcc08555595bc0322cc474c9018eb/backgrounds/cozy_harbor_ae86.webp",
+    "file": "cozy_harbor_ae86.webp",
+    "url": "https://raw.githubusercontent.com/arsh240311/omarchy-cozy-ui/9c863be291dfcc08555595bc0322cc474c9018eb/backgrounds/cozy_harbor_ae86.webp",
+    "sha256": "4d1b0e87e2b88db1f45d37cfcb125b30ea64b8406a392ef2b952df52730ed3e7"
+   },
+   "package": "omarchy-cozy-harbor-ae86-9c863be291df.tar.gz",
+   "sha256": "4025eaa8d9f9e06b584e29cd9b6069e6b3ea702ec178b6066713ea57511247fa",
+   "commit": "9c863be291dfcc08555595bc0322cc474c9018eb",
+   "updated": "2026-10-14"
+  },
+  {
+   "name": "omarchy-cpunk",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "stannorbvb-cmd",
+   "description": "The CpUnk theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/stannorbvb-cmd/cpunk/blob/d4214acfc9abef31c901a4d46afa9534cdb3ca0d/backgrounds/Arcyx.png",
+    "file": "Arcyx.png",
+    "url": "https://raw.githubusercontent.com/stannorbvb-cmd/cpunk/d4214acfc9abef31c901a4d46afa9534cdb3ca0d/backgrounds/Arcyx.png",
+    "sha256": "bc2cbdfda6911ca34374aaf5927d2fa90c60e1aeaa46e588571c2d7b1d9f0099"
+   },
+   "package": "omarchy-cpunk-d4214acfc9ab.tar.gz",
+   "sha256": "2ba0a98242c13600eb43202032a074370496e45f6d99b9bf08a7c7860664e685",
+   "commit": "d4214acfc9abef31c901a4d46afa9534cdb3ca0d",
+   "updated": "2026-10-21"
+  },
+  {
+   "name": "omarchy-crimson",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "PedroAugustoOK",
+   "description": "The Crimson theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/PedroAugustoOK/omarchy-lula-theme/blob/1ee8fb2a81797e9e6cd53ec82cb50bd42e19e0e0/backgrounds/001-lula-ember.png"
+   },
+   "package": "omarchy-crimson-1ee8fb2a8179.tar.gz",
+   "sha256": "f83a2c1e8d364a8cba710c3f435f55186319422341998d3fd9ed581e2bbedb4e",
+   "commit": "1ee8fb2a81797e9e6cd53ec82cb50bd42e19e0e0",
+   "updated": "2026-10-21"
+  },
+  {
+   "name": "omarchy-crimson-gold",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "knappkevin",
+   "description": "The Crimson Gold theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/knappkevin/omarchy-crimson-gold-theme/blob/e0829993b3543207ea7fc74282685794378b0dda/backgrounds/1-crimson-gold.png",
+    "file": "1-crimson-gold.png",
+    "url": "https://raw.githubusercontent.com/knappkevin/omarchy-crimson-gold-theme/e0829993b3543207ea7fc74282685794378b0dda/backgrounds/1-crimson-gold.png",
+    "sha256": "a482acf31d7f08d65966de94744a86f5be332e789f83d5ed1a9078e8bba6669f"
+   },
+   "package": "omarchy-crimson-gold-e0829993b354.tar.gz",
+   "sha256": "848d5e0bfe8f4487e4ef42e4845da5935bfd30e61554488e59ae9148071c234d",
+   "commit": "e0829993b3543207ea7fc74282685794378b0dda",
+   "updated": "2026-09-12"
+  },
+  {
+   "name": "omarchy-cryogenic-orchard",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "leaflessbranch",
+   "description": "The Cryogenic Orchard theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/leaflessbranch/omarchy-cryogenic-orchard-theme/blob/e186eb903fcd13f0fa2c7352e3f1a8990de02fc0/backgrounds/02-glass-pears.webp"
+   },
+   "package": "omarchy-cryogenic-orchard-e186eb903fcd.tar.gz",
+   "sha256": "d67e87479d0e1d6df134d0754a5747953ee23a480b99e3d4d9f0f9c0d419e7be",
+   "commit": "e186eb903fcd13f0fa2c7352e3f1a8990de02fc0",
+   "updated": "2026-08-31"
+  },
+  {
+   "name": "omarchy-demon",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Demon theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-demon-theme/blob/f1912c517fc374bd0ef6d307d87164661fecc07f/backgrounds/BG1.jpg"
+   },
+   "package": "omarchy-demon-f1912c517fc3.tar.gz",
+   "sha256": "00530f8bc24e43cc27597263da8043c2e99ce07937cbc1f656459f159dddd88d",
+   "commit": "f1912c517fc374bd0ef6d307d87164661fecc07f",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-dos-moos",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Dos Moos theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-dos-moos-theme/blob/5c608a4249a09a828bbac0054cabe5e19ec0d9dd/backgrounds/BG1.jpg"
+   },
+   "package": "omarchy-dos-moos-5c608a4249a0.tar.gz",
+   "sha256": "e6e7530fdc1386ed681f9cc560d4868e041b91e82a6ac4c453af095a1c9e9e3c",
+   "commit": "5c608a4249a09a828bbac0054cabe5e19ec0d9dd",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-dracula",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "catlee",
+   "description": "The Dracula theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/catlee/omarchy-dracula-theme/blob/f776b6543119dfc8682d9eac84d934d126193be9/backgrounds/base.png",
+    "file": "base.png",
+    "url": "https://raw.githubusercontent.com/catlee/omarchy-dracula-theme/f776b6543119dfc8682d9eac84d934d126193be9/backgrounds/base.png",
+    "sha256": "257066e9d33d917a636aebea95ac77a4f162e142822d311830f2a094e2497a1b"
+   },
+   "package": "omarchy-dracula-f776b6543119.tar.gz",
+   "sha256": "00c8747cfdc7c7d0ca745406682ca6ef45c6670938b14351bf46becef0b91c82",
+   "commit": "f776b6543119dfc8682d9eac84d934d126193be9",
+   "updated": "2026-09-27"
+  },
+  {
+   "name": "omarchy-dream-bureaucracy",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "leaflessbranch",
+   "description": "The Dream Bureaucracy theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/leaflessbranch/omarchy-dream-bureaucracy-theme/blob/c7489d4811e8dbab60c6220e0c5274e985df00c5/backgrounds/02-document-intake.webp"
+   },
+   "package": "omarchy-dream-bureaucracy-c7489d4811e8.tar.gz",
+   "sha256": "103bc215787c67928745c5b47338f198fdc9487dc37dba94b3d66c38ea3d2389",
+   "commit": "c7489d4811e8dbab60c6220e0c5274e985df00c5",
+   "updated": "2026-08-31"
+  },
+  {
+   "name": "omarchy-eva-01",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "ql1max",
+   "description": "The Eva 01 theme from omarchy's community",
+   "wallpaper": {
+    "license": "Unlicense",
+    "source": "https://github.com/ql1max/omarchy-eva-01/blob/98c2f8e3fe36717b648fb5aa46339007182be018/backgrounds/01-eva01.webp"
+   },
+   "package": "omarchy-eva-01-98c2f8e3fe36.tar.gz",
+   "sha256": "006e7726b5d39b01a907298159c7ad8127cc3874f6dd68eeca39bf31fb1e4e06",
+   "commit": "98c2f8e3fe36717b648fb5aa46339007182be018",
+   "updated": "2026-10-14"
+  },
+  {
+   "name": "omarchy-event-horizon",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "OldJobobo",
+   "description": "The Event Horizon theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/OldJobobo/omarchy-event-horizon-theme/blob/3e306a897442da05c147f32ac98cf9e7896294ae/backgrounds/00-warp-speed.jpg",
+    "file": "00-warp-speed.jpg",
+    "url": "https://raw.githubusercontent.com/OldJobobo/omarchy-event-horizon-theme/3e306a897442da05c147f32ac98cf9e7896294ae/backgrounds/00-warp-speed.jpg",
+    "sha256": "0e556438ead34c1f11699634ecdc2d4a130e0c485f4c922682ab2fd0d8e59831"
+   },
+   "package": "omarchy-event-horizon-3e306a897442.tar.gz",
+   "sha256": "d465bddd0c0ebfcea3b272388a0d1df61a619ce4054f4e6d2a0fb8e24e45e76f",
+   "commit": "3e306a897442da05c147f32ac98cf9e7896294ae",
+   "updated": "2026-08-12"
+  },
+  {
+   "name": "omarchy-evergarden",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "celsobenedetti",
+   "description": "The Evergarden theme from omarchy's community",
+   "wallpaper": {
+    "license": "GPL-3.0",
+    "source": "https://github.com/celsobenedetti/omarchy-evergarden/blob/1e5196cf9167e74c3a4fafb5be964cb15a3dc299/backgrounds/1-evergarden.png"
+   },
+   "package": "omarchy-evergarden-1e5196cf9167.tar.gz",
+   "sha256": "4ed0e042301b2b52daf5c35f0d212034665e9f8b211de0b0f0334c4b0d910d8f",
+   "commit": "1e5196cf9167e74c3a4fafb5be964cb15a3dc299",
+   "updated": "2026-05-27"
+  },
+  {
+   "name": "omarchy-felix",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "TyRichards",
+   "description": "The Felix theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/TyRichards/omarchy-felix-theme/blob/e24f04b4ef88076c3e6be7d739bb861b8890320e/backgrounds/00-black.png",
+    "file": "00-black.png",
+    "url": "https://raw.githubusercontent.com/TyRichards/omarchy-felix-theme/e24f04b4ef88076c3e6be7d739bb861b8890320e/backgrounds/00-black.png",
+    "sha256": "9c22fc3611304b959a4c5dc966048cd97c331a86d883abfd8f375dbdf3568022"
+   },
+   "package": "omarchy-felix-e24f04b4ef88.tar.gz",
+   "sha256": "81e00690d1b6557fd1e810d725ba1e1c901275404bfb0f63421ee2f5a1bbb8b7",
+   "commit": "e24f04b4ef88076c3e6be7d739bb861b8890320e",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-fireside",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bjarneo",
+   "description": "The Fireside theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-fireside-theme/blob/d392f4cb697501388bd896300b5575ce5a461e65/backgrounds/1.png",
+    "file": "1.png",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-fireside-theme/d392f4cb697501388bd896300b5575ce5a461e65/backgrounds/1.png",
+    "sha256": "8029b77eed6887b9eb1d83dcae2871be2dcf151afff82e2e828affd353955c53"
+   },
+   "package": "omarchy-fireside-d392f4cb6975.tar.gz",
+   "sha256": "a8840fb2a41d8a22f6542e3ff48e8a93d50c088abfdd0db6a6b4b524ac80cdf8",
+   "commit": "d392f4cb697501388bd896300b5575ce5a461e65",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-flat-dracula",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "OldJobobo",
+   "description": "The Flat Dracula theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/OldJobobo/omarchy-flat-dracula-theme/blob/9c32902e6d7846e75aad7127727090b970895ae6/backgrounds/0-midnight-veil.jpg",
+    "file": "0-midnight-veil.jpg",
+    "url": "https://raw.githubusercontent.com/OldJobobo/omarchy-flat-dracula-theme/9c32902e6d7846e75aad7127727090b970895ae6/backgrounds/0-midnight-veil.jpg",
+    "sha256": "c86ad7da38d0d0cda79893771ccfaeda13885cfb1e78eb8a47de7f62937d52cf"
+   },
+   "package": "omarchy-flat-dracula-9c32902e6d78.tar.gz",
+   "sha256": "91c00644e3e0890b5eecbaed147a062d3826b27cfb335c27ca253fcc5dc6b42e",
+   "commit": "9c32902e6d7846e75aad7127727090b970895ae6",
+   "updated": "2026-09-21"
+  },
+  {
+   "name": "omarchy-flexoki-dark",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "euandeas",
+   "description": "The Flexoki Dark theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/euandeas/omarchy-flexoki-dark-theme/blob/aa418ffb68ec1eaa72a85b02970ada07ce6f3d26/backgrounds/flexoki-dark-omarchy.png"
+   },
+   "package": "omarchy-flexoki-dark-aa418ffb68ec.tar.gz",
+   "sha256": "464f066bb7d85e404bf5b2eca1a75e111772996c366b7801feb63cbf6cfd4df0",
+   "commit": "aa418ffb68ec1eaa72a85b02970ada07ce6f3d26",
+   "updated": "2026-07-18"
+  },
+  {
+   "name": "omarchy-frost",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bjarneo",
+   "description": "The Frost theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-frost-theme/blob/f702a288630c2c740101e6c677ed4c325a598df2/backgrounds/1.jpg",
+    "file": "1.jpg",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-frost-theme/f702a288630c2c740101e6c677ed4c325a598df2/backgrounds/1.jpg",
+    "sha256": "5aff974665a0b5798f1f58ddb31daa47d498c0cbae4408c09bed1e84da63bfaf"
+   },
+   "package": "omarchy-frost-f702a288630c.tar.gz",
+   "sha256": "67c6c653404e7b2173774720d9ed7b5cd5784628c0a182a254546b10f230b494",
+   "commit": "f702a288630c2c740101e6c677ed4c325a598df2",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-fuchsblau",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "fuchsblau",
+   "description": "The fuchsblau theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/fuchsblau/omarchy-fuchsblau-theme/blob/aa7fde043ae60603c3ecc6fd6ac3b6674cacab04/backgrounds/0-fuchslicht-kueste.jpg"
+   },
+   "package": "omarchy-fuchsblau-aa7fde043ae6.tar.gz",
+   "sha256": "b3088a94e36c0bc5340f228f0147ffd37f2ce81966f12b5020562e065eb44108",
+   "commit": "aa7fde043ae60603c3ecc6fd6ac3b6674cacab04",
+   "updated": "2026-08-18"
+  },
+  {
+   "name": "omarchy-futurism",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bjarneo",
+   "description": "The Futurism theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-futurism-theme/blob/e60be451d92565da43bd7976c488af3e983370bc/backgrounds/1-futurism.jpg",
+    "file": "1-futurism.jpg",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-futurism-theme/e60be451d92565da43bd7976c488af3e983370bc/backgrounds/1-futurism.jpg",
+    "sha256": "aefe40d4c63634c837c213170f778770bd009d49e8b13b913d46cbc443aa5782"
+   },
+   "package": "omarchy-futurism-e60be451d925.tar.gz",
+   "sha256": "146d8a9a1c92bf5033e529095f2e808e207178c3792366e493730b686f5cf6cf",
+   "commit": "e60be451d92565da43bd7976c488af3e983370bc",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-futurist",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "benwillems",
+   "description": "The Futurist theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/benwillems/omarchy-futurist-theme/blob/8cd246945344c350d23ee8189a3004a2b2a5bf9d/backgrounds/01-stainless-dusk.jpg",
+    "file": "01-stainless-dusk.jpg",
+    "url": "https://raw.githubusercontent.com/benwillems/omarchy-futurist-theme/8cd246945344c350d23ee8189a3004a2b2a5bf9d/backgrounds/01-stainless-dusk.jpg",
+    "sha256": "e69ef052fd62db2b7e5d5ca123435dd1b0e68362f12a5c09b15274999cae8199"
+   },
+   "package": "omarchy-futurist-8cd246945344.tar.gz",
+   "sha256": "15dfc557a3c4fceaf013569a78bd53dcfa69c543b16e139f9bb9a5fa51b86cae",
+   "commit": "8cd246945344c350d23ee8189a3004a2b2a5bf9d",
+   "updated": "2026-08-19"
+  },
+  {
+   "name": "omarchy-gand",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "c0ze",
+   "description": "The Gand theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/c0ze/omarchy-gand-theme/blob/cf1bc5fc01eeaea429372574f24e83db4712e2e4/backgrounds/1-sigil-earth.webp",
+    "file": "1-sigil-earth.webp",
+    "url": "https://raw.githubusercontent.com/c0ze/omarchy-gand-theme/cf1bc5fc01eeaea429372574f24e83db4712e2e4/backgrounds/1-sigil-earth.webp",
+    "sha256": "b4b21fd2835eb22a02eb7d8c1a50d7571a814e7a96ebbeffb506ec31e62a967f"
+   },
+   "package": "omarchy-gand-cf1bc5fc01ee.tar.gz",
+   "sha256": "961b38f3dbba4e4eb948eb50a44d5c0e26b8cc82c55d42aab2abb56fcccb8849",
+   "commit": "cf1bc5fc01eeaea429372574f24e83db4712e2e4",
+   "updated": "2026-09-09"
+  },
+  {
+   "name": "omarchy-ghost-pastel",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "row-huh",
+   "description": "The Ghost Pastel theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/row-huh/omarchy-ghost-pastel-theme/blob/d8e1b554412737240c6d6ba19c652d64c433092b/backgrounds/1-GhostPastel.jpg",
+    "file": "1-GhostPastel.jpg",
+    "url": "https://raw.githubusercontent.com/row-huh/omarchy-ghost-pastel-theme/d8e1b554412737240c6d6ba19c652d64c433092b/backgrounds/1-GhostPastel.jpg",
+    "sha256": "9211f535a7ca6a5ff8d16789faf0bd32cf19ae01919a604df0b86680e41dc38f"
+   },
+   "package": "omarchy-ghost-pastel-d8e1b5544127.tar.gz",
+   "sha256": "df44667c468113639cf86b60d9852b4c61005aa94da412e3b68b721fb6f21e83",
+   "commit": "d8e1b554412737240c6d6ba19c652d64c433092b",
+   "updated": "2026-07-27"
+  },
+  {
+   "name": "omarchy-ghostwire",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "vispobish01-netizen",
+   "description": "The Ghostwire theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/vispobish01-netizen/omarchy-ghostwire-theme/blob/ed11959ab6518c9e769830acf1957d6000b33cb5/backgrounds/ghostwire-aurora-peaks.webp"
+   },
+   "package": "omarchy-ghostwire-ed11959ab651.tar.gz",
+   "sha256": "957f37a9230b289ab81a6444179ef92d82b7b5b66df328854f148e3bba43ada8",
+   "commit": "ed11959ab6518c9e769830acf1957d6000b33cb5",
+   "updated": "2026-10-21"
+  },
+  {
+   "name": "omarchy-gold-rush",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "tahayvr",
+   "description": "The Gold Rush theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/tahayvr/omarchy-gold-rush-theme/blob/157d3a1a67b924abafbd65d4dcbdc070b04c8ef7/backgrounds/1-gold-rush.png",
+    "file": "1-gold-rush.png",
+    "url": "https://raw.githubusercontent.com/tahayvr/omarchy-gold-rush-theme/157d3a1a67b924abafbd65d4dcbdc070b04c8ef7/backgrounds/1-gold-rush.png",
+    "sha256": "2b968c83a2509fc9444d550130fd6cc84d7ce97e1c63e9a245ee9e72407cf0ca"
+   },
+   "package": "omarchy-gold-rush-157d3a1a67b9.tar.gz",
+   "sha256": "3834ac5ac088aa274b85563d88592e1939b27771e23d02f7bd144805c9ff0caf",
+   "commit": "157d3a1a67b924abafbd65d4dcbdc070b04c8ef7",
+   "updated": "2026-09-17"
+  },
+  {
+   "name": "omarchy-golden-brown",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "atif-1402",
+   "description": "The Golden Brown theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/atif-1402/omarchy-golden-brown-theme/blob/7cea2f2ffd84af2f46ad27b3db00774155dd7380/backgrounds/BG1.png"
+   },
+   "package": "omarchy-golden-brown-7cea2f2ffd84.tar.gz",
+   "sha256": "c2e6bc550af9b751e5f3865a72ee1a34c070535e8525d506524a92effe3fd029",
+   "commit": "7cea2f2ffd84af2f46ad27b3db00774155dd7380",
+   "updated": "2026-05-23"
+  },
+  {
+   "name": "omarchy-golden-gate",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "JeoCrypto",
+   "description": "The Golden Gate theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/JeoCrypto/omarchy-golden-gate-theme/blob/faf2548ea639bf6671aa3bb3f8d13d72e5e146aa/backgrounds/1-golden-gate-dusk.jpg"
+   },
+   "package": "omarchy-golden-gate-faf2548ea639.tar.gz",
+   "sha256": "68a5f9a22d8bc2465a7b06357ded704006bfc3fd68dca50104ac46db7dcb72b2",
+   "commit": "faf2548ea639bf6671aa3bb3f8d13d72e5e146aa",
+   "updated": "2026-10-16"
+  },
+  {
+   "name": "omarchy-greek-noir",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Greek Noir theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-greek-noir-theme/blob/50152bb8392fae480950e2dae33b10c91035dc56/backgrounds/BG1.png"
+   },
+   "package": "omarchy-greek-noir-50152bb8392f.tar.gz",
+   "sha256": "17d5099e3744e6402c142b7c5d15be58ca875934c351dad885520804550c34fd",
+   "commit": "50152bb8392fae480950e2dae33b10c91035dc56",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-gruvbox-material",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "curbol",
+   "description": "The Gruvbox Material theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/curbol/omarchy-gruvbox-material/blob/1bcf7f9339ce99fc7a93e1757da66d8ac7c5d47d/backgrounds/1-autumn-canopy.jpg",
+    "file": "1-autumn-canopy.jpg",
+    "url": "https://raw.githubusercontent.com/curbol/omarchy-gruvbox-material/1bcf7f9339ce99fc7a93e1757da66d8ac7c5d47d/backgrounds/1-autumn-canopy.jpg",
+    "sha256": "0eee22f66b4c809a3be44cced8c62d74eba7c019dd4ef9ded154f08ebb2ab2c2"
+   },
+   "package": "omarchy-gruvbox-material-1bcf7f9339ce.tar.gz",
+   "sha256": "594b8d49017e66d11f7fbd4667d019f495e1011de400541bfc39599af7388b62",
+   "commit": "1bcf7f9339ce99fc7a93e1757da66d8ac7c5d47d",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-gta6",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "debpalash",
+   "description": "The GTA6 theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/debpalash/omarchy-gta6-theme/blob/f1eaa3c7c7eb8bfac1ef05e67f680124c314cf01/backgrounds/1-vice-sunset-ultrawide.webp"
+   },
+   "package": "omarchy-gta6-f1eaa3c7c7eb.tar.gz",
+   "sha256": "a1fe92844781ad435ddbb231f96d73931e4e64717faa1f166f227efb4d676259",
+   "commit": "f1eaa3c7c7eb8bfac1ef05e67f680124c314cf01",
+   "updated": "2026-09-03"
+  },
+  {
+   "name": "omarchy-harbor",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "HANCORE-linux",
+   "description": "The Harbor theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-harbor-theme/blob/022eeb5f7e2082e35cc8c6a4499eea94c14ccd6a/backgrounds/BG1.png"
+   },
+   "package": "omarchy-harbor-022eeb5f7e20.tar.gz",
+   "sha256": "014b46a35c6241d01369cedc48dca0160516974abb34dd728126cdea0cd95757",
+   "commit": "022eeb5f7e2082e35cc8c6a4499eea94c14ccd6a",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-harbor-dark",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Harbor Dark theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-harbordark-theme/blob/61547cacbf834bf2fb7ac11925cfc75e7c0b4033/backgrounds/HBG1.png"
+   },
+   "package": "omarchy-harbor-dark-61547cacbf83.tar.gz",
+   "sha256": "20a019309935e6c9479fb5d9c518a2bea753913ddec4b886cbb52c17c0f53edd",
+   "commit": "61547cacbf834bf2fb7ac11925cfc75e7c0b4033",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-hermarchy",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "archer-clawbot",
+   "description": "The Hermarchy theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/archer-clawbot/omarchy-hermarchy-theme/blob/12f3c5257f87237fa3fd549cf7be3f9fba76f9c8/backgrounds/01-hermarchy-command.png"
+   },
+   "package": "omarchy-hermarchy-12f3c5257f87.tar.gz",
+   "sha256": "5f7f71ce29e36865f48d5cd2860b882e3e833fc04691b80bc4a622b51ecdfae9",
+   "commit": "12f3c5257f87237fa3fd549cf7be3f9fba76f9c8",
+   "updated": "2026-08-29"
+  },
+  {
+   "name": "omarchy-hermes-blue",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bryanperdana",
+   "description": "The Hermes Blue theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/bryanperdana/omarchy-hermes-blue-theme/blob/65577fbc042ec389b7cafa7a5afaece6681a9b8d/backgrounds/1-hermes-messenger.png"
+   },
+   "package": "omarchy-hermes-blue-65577fbc042e.tar.gz",
+   "sha256": "467c6bb416257de8acad749bdf96ecbed78245a16e0e4948ea5a8aef0903ef33",
+   "commit": "65577fbc042ec389b7cafa7a5afaece6681a9b8d",
+   "updated": "2026-10-20"
+  },
+  {
+   "name": "omarchy-hinterlands",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "OldJobobo",
+   "description": "The Hinterlands theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/OldJobobo/omarchy-hinterlands-theme/blob/24f8759e7e52a2d953383b59241c256ea8138160/backgrounds/0-zen-tide.png",
+    "file": "0-zen-tide.png",
+    "url": "https://raw.githubusercontent.com/OldJobobo/omarchy-hinterlands-theme/24f8759e7e52a2d953383b59241c256ea8138160/backgrounds/0-zen-tide.png",
+    "sha256": "d7f523c2f96902d443ab9a9c213b2e210aad3648ac5ad951cad8791f2c427b87"
+   },
+   "package": "omarchy-hinterlands-24f8759e7e52.tar.gz",
+   "sha256": "6acca7a244b97aed7388238df371776ca0a38f2dbf95342363dd502fc00c6494",
+   "commit": "24f8759e7e52a2d953383b59241c256ea8138160",
+   "updated": "2026-06-21"
+  },
+  {
+   "name": "omarchy-inky-pinky",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Inky Pinky theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-inkypinky-theme/blob/9577b6f5072c5795076c0985ef11ef17c56f8cb9/backgrounds/BG1_2.jpg"
+   },
+   "package": "omarchy-inky-pinky-9577b6f5072c.tar.gz",
+   "sha256": "59809c1689398564c78318ec79f373436c74ad7264681197649f470123444f69",
+   "commit": "9577b6f5072c5795076c0985ef11ef17c56f8cb9",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-japan-night",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "devgtv",
+   "description": "The Japan Night theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/devgtv/omarchy-japan-night-theme/blob/dc25d9f18a9655c0b42a10b451f81e2693eeea55/backgrounds/japan-night-1.jpg",
+    "file": "japan-night-1.jpg",
+    "url": "https://raw.githubusercontent.com/devgtv/omarchy-japan-night-theme/dc25d9f18a9655c0b42a10b451f81e2693eeea55/backgrounds/japan-night-1.jpg",
+    "sha256": "86b9c87f582f67529ab131e43ce4be15863a1bdd1a2608a2d288d04b7ca2fcfe"
+   },
+   "package": "omarchy-japan-night-dc25d9f18a96.tar.gz",
+   "sha256": "4bd53c905610345aeab2e964ec31e577a2353dc4138b77276acceb58b7d8da01",
+   "commit": "dc25d9f18a9655c0b42a10b451f81e2693eeea55",
+   "updated": "2026-08-19"
+  },
+  {
+   "name": "omarchy-kupola",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "Anhelm01",
+   "description": "The Kupola theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/Anhelm01/omarchy-kupola-theme/blob/323a865507096fac0b10111d5ac739e687e66e2c/backgrounds/kupola.jpg"
+   },
+   "package": "omarchy-kupola-323a86550709.tar.gz",
+   "sha256": "bb70259da419b7e74f2e430c5747d5d22596cf64e5a9776110b90b8e818fcc57",
+   "commit": "323a865507096fac0b10111d5ac739e687e66e2c",
+   "updated": "2026-10-18"
+  },
+  {
+   "name": "omarchy-lamplight",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "thisisgm",
+   "description": "The Lamplight theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/thisisgm/omarchy-lamplight-theme/blob/55d6be776b9338c54a30985f05280c42f7b51c95/backgrounds/1-terminator.png"
+   },
+   "package": "omarchy-lamplight-55d6be776b93.tar.gz",
+   "sha256": "69668e7fd476b91aa31325e5a4c1deb1450ac011cd0e33373c83782edac55c76",
+   "commit": "55d6be776b9338c54a30985f05280c42f7b51c95",
+   "updated": "2026-08-16"
+  },
+  {
+   "name": "omarchy-lawson-night",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "phuclh",
+   "description": "The Lawson Night theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/phuclh/omarchy-lawson-night-theme/blob/28dfc0086cabb3c7a9032880bdd027e35dd968a0/backgrounds/wallhaven-1k6ljv.jpg",
+    "file": "wallhaven-1k6ljv.jpg",
+    "url": "https://raw.githubusercontent.com/phuclh/omarchy-lawson-night-theme/28dfc0086cabb3c7a9032880bdd027e35dd968a0/backgrounds/wallhaven-1k6ljv.jpg",
+    "sha256": "46c8452024fbfbaffcd875ef9fb5103e5af4143cc44889888810df491ce876ac"
+   },
+   "package": "omarchy-lawson-night-28dfc0086cab.tar.gz",
+   "sha256": "d0cb3443bd50474507f05873a619bf58bed4f442a6ea8150b4b541c51125d06b",
+   "commit": "28dfc0086cabb3c7a9032880bdd027e35dd968a0",
+   "updated": "2026-08-28"
+  },
+  {
+   "name": "omarchy-living-ink",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "leaflessbranch",
+   "description": "The Living Ink theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/leaflessbranch/omarchy-living-ink-theme/blob/b23618ab63c8a0e5010e8647f96286343c13fb27/backgrounds/02-ink-wave.webp"
+   },
+   "package": "omarchy-living-ink-b23618ab63c8.tar.gz",
+   "sha256": "0a9533e84f0ef3c2ff6b86b1d690853869a077c3c194099a59f4b2f3bb487c05",
+   "commit": "b23618ab63c8a0e5010e8647f96286343c13fb27",
+   "updated": "2026-08-31"
+  },
+  {
+   "name": "omarchy-matrix",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "BVisagie",
+   "description": "The Matrix theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/BVisagie/omarchy-matrix-theme/blob/59e757b168b49e2a0000065da654895050d0f8fc/backgrounds/0-hotel-corridor.jpg"
+   },
+   "package": "omarchy-matrix-59e757b168b4.tar.gz",
+   "sha256": "3367104932c43b2213eab002c9c17e4d5ad0a0188f6b00533df512f2185f9296",
+   "commit": "59e757b168b49e2a0000065da654895050d0f8fc",
+   "updated": "2026-10-22"
+  },
+  {
+   "name": "omarchy-mechanoonna",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Mechanoonna theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-mechanoonna-theme/blob/ca6c427eb946217d9e1bc79da23473fbf1b3e1a5/backgrounds/BG1.jpg"
+   },
+   "package": "omarchy-mechanoonna-ca6c427eb946.tar.gz",
+   "sha256": "c2fad12b4296419a7a581467fed1e8d82610d6e855698376d423c2c4316407e1",
+   "commit": "ca6c427eb946217d9e1bc79da23473fbf1b3e1a5",
+   "updated": "2026-10-07"
+  },
+  {
+   "name": "omarchy-midnight",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "JaxonWright",
+   "description": "The Midnight theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/JaxonWright/omarchy-midnight-theme/blob/fdf1c9bba9bfd89dead37d0613a034d1d65ffeb9/backgrounds/1-oled-black.png",
+    "file": "1-oled-black.png",
+    "url": "https://raw.githubusercontent.com/JaxonWright/omarchy-midnight-theme/fdf1c9bba9bfd89dead37d0613a034d1d65ffeb9/backgrounds/1-oled-black.png",
+    "sha256": "2aebe56d2da33491fdaa0597a463940bdcf272e4302527f9a4effe788a49ffa4"
+   },
+   "package": "omarchy-midnight-fdf1c9bba9bf.tar.gz",
+   "sha256": "59aa57ca544d7f58be07e66c5fcac4ac2e55305d239c92cc47bea5df31a04612",
+   "commit": "fdf1c9bba9bfd89dead37d0613a034d1d65ffeb9",
+   "updated": "2026-10-17"
+  },
+  {
+   "name": "omarchy-mini-jcw",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "davydotcom",
+   "description": "The Mini Jcw theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/davydotcom/omarchy-mini-jcw-theme/blob/53c25ab31b241ef69a3f80da4dbf6e64cf59453f/backgrounds/1-midnight-rain.jpg",
+    "file": "1-midnight-rain.jpg",
+    "url": "https://raw.githubusercontent.com/davydotcom/omarchy-mini-jcw-theme/53c25ab31b241ef69a3f80da4dbf6e64cf59453f/backgrounds/1-midnight-rain.jpg",
+    "sha256": "664fcae38e2505cb5283e2063cc87e829768e54fcbb8ef96ae9b0e72dfc836e4"
+   },
+   "package": "omarchy-mini-jcw-53c25ab31b24.tar.gz",
+   "sha256": "e6d3f231f2fc6fc18c88c8c5527582c77b317ef6f897387b06d59290ccb478c5",
+   "commit": "53c25ab31b241ef69a3f80da4dbf6e64cf59453f",
+   "updated": "2026-08-22"
+  },
+  {
+   "name": "omarchy-modus-operandi",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "codingquark",
+   "description": "The Modus Operandi theme from omarchy's community",
+   "wallpaper": {
+    "license": "GPL-3.0",
+    "source": "https://github.com/codingquark/omarchy-modus-operandi-theme/blob/41914632af65d9322aba6f712de1db17658176f7/backgrounds/01-paper.png"
+   },
+   "package": "omarchy-modus-operandi-41914632af65.tar.gz",
+   "sha256": "9dc8e39c874c86a49b31553e6f2ebf0018def03c8c405c8cb73eb67d52b6c79e",
+   "commit": "41914632af65d9322aba6f712de1db17658176f7",
+   "updated": "2026-10-15"
+  },
+  {
+   "name": "omarchy-modus-vivendi",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "codingquark",
+   "description": "The Modus Vivendi theme from omarchy's community",
+   "wallpaper": {
+    "license": "GPL-3.0",
+    "source": "https://github.com/codingquark/omarchy-modus-vivendi-theme/blob/371bbb89b2278b3366731d299e1bc23b0f59c5f7/backgrounds/01-paper.png"
+   },
+   "package": "omarchy-modus-vivendi-371bbb89b227.tar.gz",
+   "sha256": "d522d6b1154c1c01853ba8c2a7932fc52e88b54c406ae4137d6e354d95d465fb",
+   "commit": "371bbb89b2278b3366731d299e1bc23b0f59c5f7",
+   "updated": "2026-10-15"
+  },
+  {
+   "name": "omarchy-monokai",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bjarneo",
+   "description": "The Monokai theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-monokai-theme/blob/619b66e36f160b30bec5a421948316310aba32ab/backgrounds/1.png",
+    "file": "1.png",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-monokai-theme/619b66e36f160b30bec5a421948316310aba32ab/backgrounds/1.png",
+    "sha256": "02774a9a85905bae5fedfc495efb3e504e884e7daaab43a0177296e84b562a20"
+   },
+   "package": "omarchy-monokai-619b66e36f16.tar.gz",
+   "sha256": "6a131b90324d4f9bbb57aa2d614c04111f9cdbbe8db277f0e6ceb4bbc5ed62ee",
+   "commit": "619b66e36f160b30bec5a421948316310aba32ab",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-moodpeak",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Moodpeak theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-moodpeak-theme/blob/f77b852780a23197fcbc095f9751004f83e277dd/backgrounds/BG1.png"
+   },
+   "package": "omarchy-moodpeak-f77b852780a2.tar.gz",
+   "sha256": "732629ab49fb424bd689362cfc59bedc55f7a06fadd32fe650724eb76ef19ab3",
+   "commit": "f77b852780a23197fcbc095f9751004f83e277dd",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-naysayer",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "brianblakely",
+   "description": "The Naysayer theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/brianblakely/omarchy-naysayer-theme/blob/8d8a1805c6e36d966dbeeda7dc1a7dec326e38f7/backgrounds/0-adventure.png",
+    "file": "0-adventure.png",
+    "url": "https://raw.githubusercontent.com/brianblakely/omarchy-naysayer-theme/8d8a1805c6e36d966dbeeda7dc1a7dec326e38f7/backgrounds/0-adventure.png",
+    "sha256": "528206609324fff1498bbb3cb4d4f66c174b2a13d9391d227f52a84a0dcccbfe"
+   },
+   "package": "omarchy-naysayer-8d8a1805c6e3.tar.gz",
+   "sha256": "e4977be3fb1ea1bfccd1b552be48ff6f3b95bf2d438243ec92cf97c751a6118e",
+   "commit": "8d8a1805c6e36d966dbeeda7dc1a7dec326e38f7",
+   "updated": "2026-08-20"
+  },
+  {
+   "name": "omarchy-nedia",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "aidenlangley",
+   "description": "The Nedia theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/aidenlangley/omarchy-nedia-theme/blob/94ec6ce3796eaa20477a9626b226f0a8e7eb20d5/backgrounds/HarborDark3.webp"
+   },
+   "package": "omarchy-nedia-94ec6ce3796e.tar.gz",
+   "sha256": "85e90854e46fbe46a55b435d89bd16dd273f26768d517112748ccede85f5d6be",
+   "commit": "94ec6ce3796eaa20477a9626b226f0a8e7eb20d5",
+   "updated": "2026-10-19"
+  },
+  {
+   "name": "omarchy-neon-dusk",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "daniel-felipe",
+   "description": "The Neon Dusk theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/daniel-felipe/omarchy-neon-dusk-theme/blob/4817b64fa54af20d1cc98abdd18c80c67f1801d5/backgrounds/0-magenta-arch.webp",
+    "file": "0-magenta-arch.webp",
+    "url": "https://raw.githubusercontent.com/daniel-felipe/omarchy-neon-dusk-theme/4817b64fa54af20d1cc98abdd18c80c67f1801d5/backgrounds/0-magenta-arch.webp",
+    "sha256": "e1b0532bf3590aff6c5664685dc9b7c87d1e37b75074a9f7e05799a2aeeeba13"
+   },
+   "package": "omarchy-neon-dusk-4817b64fa54a.tar.gz",
+   "sha256": "0ea97b0bc1ac90d686139b654ece2a49e3bb56fe1e446127f44a2d0f6a6d201b",
+   "commit": "4817b64fa54af20d1cc98abdd18c80c67f1801d5",
+   "updated": "2026-08-28"
+  },
+  {
+   "name": "omarchy-neon-fossil",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "leaflessbranch",
+   "description": "The Neon Fossil theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/leaflessbranch/omarchy-neon-fossil-theme/blob/14d1a267ad64f2577a6be481ca96e5645811005f/backgrounds/02-trilobite-scan.webp"
+   },
+   "package": "omarchy-neon-fossil-14d1a267ad64.tar.gz",
+   "sha256": "92b44bcc6af0dbe574a8c82333b2b9757dea3adb4e4902dbe9c664124800ea9f",
+   "commit": "14d1a267ad64f2577a6be481ca96e5645811005f",
+   "updated": "2026-08-31"
+  },
+  {
+   "name": "omarchy-neptune-blue",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "davydotcom",
+   "description": "The Neptune Blue theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/davydotcom/omarchy-neptune-blue-theme/blob/e9e9ca978f9ab8455a9aeb104e7737e873528ee3/backgrounds/1-desert-dusk.jpg",
+    "file": "1-desert-dusk.jpg",
+    "url": "https://raw.githubusercontent.com/davydotcom/omarchy-neptune-blue-theme/e9e9ca978f9ab8455a9aeb104e7737e873528ee3/backgrounds/1-desert-dusk.jpg",
+    "sha256": "d463ac2bc88814d26f509561c8539f1d4c4601ae184c0c51f01d546d815271c0"
+   },
+   "package": "omarchy-neptune-blue-e9e9ca978f9a.tar.gz",
+   "sha256": "de171e8ec74b793a241e3832fc7a648eb3f77a14e64076b013d0f03ecd7d756c",
+   "commit": "e9e9ca978f9ab8455a9aeb104e7737e873528ee3",
+   "updated": "2026-08-22"
+  },
+  {
+   "name": "omarchy-nes",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bjarneo",
+   "description": "The NES theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-nes-theme/blob/4ab5a95f4212848ef615c3f349c3f7d7376f4654/backgrounds/1-nes.png",
+    "file": "1-nes.png",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-nes-theme/4ab5a95f4212848ef615c3f349c3f7d7376f4654/backgrounds/1-nes.png",
+    "sha256": "88d08f43bfaff613904a8d40ae8015a701e5c784c4eb87c2f6e829bc5ce8399f"
+   },
+   "package": "omarchy-nes-4ab5a95f4212.tar.gz",
+   "sha256": "25091dbc23ddf48287a896aef9c3f926c0f491119bf411fc8fbda05a291b751e",
+   "commit": "4ab5a95f4212848ef615c3f349c3f7d7376f4654",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-noir",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "tahadx",
+   "description": "The Noir theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/tahadx/omarchy-noir-theme/blob/47538cadce0e55aff49f15fd5b9a5d9209db5435/backgrounds/Ethereal%20Silk.jpg"
+   },
+   "package": "omarchy-noir-47538cadce0e.tar.gz",
+   "sha256": "672019ac5c4a94ff9d3901bede1b56810e7f3fd62b274c49d744264509655867",
+   "commit": "47538cadce0e55aff49f15fd5b9a5d9209db5435",
+   "updated": "2026-10-01"
+  },
+  {
+   "name": "omarchy-noir-dawn",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "tahadx",
+   "description": "The Noir Dawn theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/tahadx/omarchy-noir-dawn-theme/blob/c2590a58e405c0a3c232ecd8efac4bbdc6daa9ca/backgrounds/1-eyes-wide.webp"
+   },
+   "package": "omarchy-noir-dawn-c2590a58e405.tar.gz",
+   "sha256": "8305f56e20fa934f8bceb4947991c347277c0cb72cb8a66966effed50f2c1ff9",
+   "commit": "c2590a58e405c0a3c232ecd8efac4bbdc6daa9ca",
+   "updated": "2026-10-01"
+  },
+  {
+   "name": "omarchy-nujabes",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HalmyLyseas",
+   "description": "The Nujabes theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HalmyLyseas/omarchy-nujabes-theme/blob/7b4ad9f63cad7299d1bf41551764a292011c9ad5/backgrounds/1-nujabes.jpg"
+   },
+   "package": "omarchy-nujabes-7b4ad9f63cad.tar.gz",
+   "sha256": "a2e55c7f1cf80e8d53a44c3bf1daac8bafee1707c85c02a72c851397ecdb4976",
+   "commit": "7b4ad9f63cad7299d1bf41551764a292011c9ad5",
+   "updated": "2026-09-27"
+  },
+  {
+   "name": "omarchy-oligarchy",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "EF-Code",
+   "description": "The Oligarchy theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/EF-Code/omarchy-oligarchy-theme/blob/0ac0d3b70dea13454bae6ecfd86744a0c499da9d/backgrounds/01-free-software.webp"
+   },
+   "package": "omarchy-oligarchy-0ac0d3b70dea.tar.gz",
+   "sha256": "0cf84541051f1700f5eb66343b64db39be2ac74b4f935e9ec55e34c84d454c36",
+   "commit": "0ac0d3b70dea13454bae6ecfd86744a0c499da9d",
+   "updated": "2026-08-27"
+  },
+  {
+   "name": "omarchy-omaled",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "brianblakely",
+   "description": "The OmaLED theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/brianblakely/omarchy-omaled-theme/blob/3912f2a2e264bda821457e759d8387ff586fc5df/backgrounds/0.png"
+   },
+   "package": "omarchy-omaled-3912f2a2e264.tar.gz",
+   "sha256": "b9d6950f718ac04ba8b9a4c8d467c76c29fb597429e42aaf4bb8e424f10228a6",
+   "commit": "3912f2a2e264bda821457e759d8387ff586fc5df",
+   "updated": "2026-08-19"
+  },
+  {
+   "name": "omarchy-one-dark",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "joaopinto15",
+   "description": "The One Dark theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/joaopinto15/omarchy-one-dark-theme/blob/a21d0775fc72a71147e8b626cc8530b87eb65bea/backgrounds/0-storm-clouds.jpg"
+   },
+   "package": "omarchy-one-dark-a21d0775fc72.tar.gz",
+   "sha256": "29f0ce5bb0b37c0b51dd1c205ef7b64cc8eed7eede7fd26eafa618df4c44d548",
+   "commit": "a21d0775fc72a71147e8b626cc8530b87eb65bea",
+   "updated": "2026-08-27"
+  },
+  {
+   "name": "omarchy-one-dark-pro",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "sc0ttman",
+   "description": "The One Dark Pro theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/sc0ttman/omarchy-one-dark-pro-theme/blob/0874b66bf30f4525442f55fc88a443ce56a7decf/backgrounds/bg1.png"
+   },
+   "package": "omarchy-one-dark-pro-0874b66bf30f.tar.gz",
+   "sha256": "19fff8f256a80cc2c6450f650a2cea000357c52faf7184867d78044e4dce3332",
+   "commit": "0874b66bf30f4525442f55fc88a443ce56a7decf",
+   "updated": "2026-08-21"
+  },
+  {
+   "name": "omarchy-outpost",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "simoz",
+   "description": "The Outpost theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/simoz/omarchy-outpost-theme/blob/8829f42d8859578f58327d6ff0b785d240b381ea/backgrounds/01-forest.webp"
+   },
+   "package": "omarchy-outpost-8829f42d8859.tar.gz",
+   "sha256": "ec581a7da828b823b74fb4382397c6c7c8b9ce8f2b933d882aa380017e81ab1e",
+   "commit": "8829f42d8859578f58327d6ff0b785d240b381ea",
+   "updated": "2026-10-12"
+  },
+  {
+   "name": "omarchy-oxo-carbon",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Oxo Carbon theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-oxocarbon-theme/blob/0fe21c279bcdec7dc80b403b32123ee7e124fab8/backgrounds/BG1.jpg"
+   },
+   "package": "omarchy-oxo-carbon-0fe21c279bcd.tar.gz",
+   "sha256": "804047807c57d9b7008c400dd762c93b8964cac01a8d014891bf70dab4130455",
+   "commit": "0fe21c279bcdec7dc80b403b32123ee7e124fab8",
+   "updated": "2026-10-07"
+  },
+  {
+   "name": "omarchy-pagan",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "c0ze",
+   "description": "The Pagan theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/c0ze/omarchy-pagan-theme/blob/f4f95885310feb8586b26aba6b52ee034c8bc419/backgrounds/1-logo-dark.webp",
+    "file": "1-logo-dark.webp",
+    "url": "https://raw.githubusercontent.com/c0ze/omarchy-pagan-theme/f4f95885310feb8586b26aba6b52ee034c8bc419/backgrounds/1-logo-dark.webp",
+    "sha256": "a31848486927a8c4c2fe4cb600dd0e11dccbbaf3b1cc9e5d1e899ee644bffc25"
+   },
+   "package": "omarchy-pagan-f4f95885310f.tar.gz",
+   "sha256": "a1f343bdcd5b2c6af3190fd5cafebdbb980c699b4759c411caa18f37b7c3f91e",
+   "commit": "f4f95885310feb8586b26aba6b52ee034c8bc419",
+   "updated": "2026-09-09"
+  },
+  {
+   "name": "omarchy-periphery",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "r-bart",
+   "description": "The Periphery theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/r-bart/omarchy-periphery-theme/blob/44d17f5289fd2213e59f1d879f9f4bc83d9bcedf/backgrounds/1-flow.jpg"
+   },
+   "package": "omarchy-periphery-44d17f5289fd.tar.gz",
+   "sha256": "711be685bf6a1303f71b3c2c9e2b87b024905d9215428ce8f05075414135f597",
+   "commit": "44d17f5289fd2213e59f1d879f9f4bc83d9bcedf",
+   "updated": "2026-08-28"
+  },
+  {
+   "name": "omarchy-pina",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bjarneo",
+   "description": "The Pina theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-pina-theme/blob/1a65543445d76ecc52a4a83b9b35be8c90a97ad0/backgrounds/1.jpg",
+    "file": "1.jpg",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-pina-theme/1a65543445d76ecc52a4a83b9b35be8c90a97ad0/backgrounds/1.jpg",
+    "sha256": "b3646d78190c5c447da108cf6a85a22379c6f71968668ef5fd958a6abfa68f62"
+   },
+   "package": "omarchy-pina-1a65543445d7.tar.gz",
+   "sha256": "15401a42034ecd630a74929e188396bcf3055be1c863890ad90671e7bc4a0143",
+   "commit": "1a65543445d76ecc52a4a83b9b35be8c90a97ad0",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-pulsar",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bjarneo",
+   "description": "The Pulsar theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-pulsar-theme/blob/b9af6225b5fb5731b9634d1a94cfa2fb06a3b5c9/backgrounds/1-pulsar-dark.jpg",
+    "file": "1-pulsar-dark.jpg",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-pulsar-theme/b9af6225b5fb5731b9634d1a94cfa2fb06a3b5c9/backgrounds/1-pulsar-dark.jpg",
+    "sha256": "9ef55b6d9e22dfcf64d70293642ff048c0c3fd13fbb8fe472e4e5ff704110204"
+   },
+   "package": "omarchy-pulsar-b9af6225b5fb.tar.gz",
+   "sha256": "0c758efeeaeaf8c3096382b6fb1bb2487c89cfa0836a54134ec2f5674de35352",
+   "commit": "b9af6225b5fb5731b9634d1a94cfa2fb06a3b5c9",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-purplewave",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "dotsilva",
+   "description": "The Purplewave theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/dotsilva/omarchy-purplewave-theme/blob/ce01e9c583ce42b33fe63f5e6b9e6da13b9644ba/backgrounds/a-sunset-omarchy.png"
+   },
+   "package": "omarchy-purplewave-ce01e9c583ce.tar.gz",
+   "sha256": "c1114e323d104aa45dc44b5c78a2a7b42bb9e220e72d3c03f1de6fa7807d82d3",
+   "commit": "ce01e9c583ce42b33fe63f5e6b9e6da13b9644ba",
+   "updated": "2026-05-14"
+  },
+  {
+   "name": "omarchy-q2dm1",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "TheLinuxITGuy",
+   "description": "The Q2DM1 theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/TheLinuxITGuy/omarchy-q2dm1-theme/blob/9835bf90a1b3d17b0015f76d0db1d4f9b26f62c3/backgrounds/q2dm1.jpg",
+    "file": "q2dm1.jpg",
+    "url": "https://raw.githubusercontent.com/TheLinuxITGuy/omarchy-q2dm1-theme/9835bf90a1b3d17b0015f76d0db1d4f9b26f62c3/backgrounds/q2dm1.jpg",
+    "sha256": "34619da0a5dbeb66ebb4de03209315855ed7b5233d11adcbc290c95fd194311a"
+   },
+   "package": "omarchy-q2dm1-9835bf90a1b3.tar.gz",
+   "sha256": "76dcb6c1249b4e69d857b1814c8228e1a4b8e85f6362edc3ff3f042955e01c56",
+   "commit": "9835bf90a1b3d17b0015f76d0db1d4f9b26f62c3",
+   "updated": "2026-10-14"
+  },
+  {
+   "name": "omarchy-quattrocento-light",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "r-bart",
+   "description": "The Quattrocento Light theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/r-bart/omarchy-quattrocento-light-theme/blob/c3e4cbaf0b7b5fc1f42df98cd9623f5f0aa6a9c4/backgrounds/1-codex.webp"
+   },
+   "package": "omarchy-quattrocento-light-c3e4cbaf0b7b.tar.gz",
+   "sha256": "705ca572142558b4ca8ffdecebb5e502e843436dbea85e3e67759d5e7526b3c8",
+   "commit": "c3e4cbaf0b7b5fc1f42df98cd9623f5f0aa6a9c4",
+   "updated": "2026-08-29"
+  },
+  {
+   "name": "omarchy-rainy-night",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "atif-1402",
+   "description": "The Rainy Night theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/atif-1402/omarchy-rainynight-theme/blob/03fdd3f8552ca443c70d2e3d2b698ddd2ad785ec/backgrounds/1.png",
+    "file": "1.png",
+    "url": "https://raw.githubusercontent.com/atif-1402/omarchy-rainynight-theme/03fdd3f8552ca443c70d2e3d2b698ddd2ad785ec/backgrounds/1.png",
+    "sha256": "18932e91a92371748fdde0609a5d3afbd40544d23392038239eeb608e07bc363"
+   },
+   "package": "omarchy-rainy-night-03fdd3f8552c.tar.gz",
+   "sha256": "c46480ae1469cc6ca476769164f6898dd4fb38542e7d9e7ba78aa2406819c459",
+   "commit": "03fdd3f8552ca443c70d2e3d2b698ddd2ad785ec",
+   "updated": "2026-05-22"
+  },
+  {
+   "name": "omarchy-red-monarch",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "kamatealip",
+   "description": "The Red Monarch theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/kamatealip/omarchy-red-monarch-theme/blob/678355c69795dddff8ea46a10abeb5186823cd82/backgrounds/red_monarch_omarchy.png",
+    "file": "red_monarch_omarchy.png",
+    "url": "https://raw.githubusercontent.com/kamatealip/omarchy-red-monarch-theme/678355c69795dddff8ea46a10abeb5186823cd82/backgrounds/red_monarch_omarchy.png",
+    "sha256": "46f195ba71034847404e2cc071f3384f5be2ba0a60f6f227e1ea4a140a297006"
+   },
+   "package": "omarchy-red-monarch-678355c69795.tar.gz",
+   "sha256": "1a3cc8231e01ad7670cb00139066334d6c626b92edf3d5a631ba96dc0fa8b361",
+   "commit": "678355c69795dddff8ea46a10abeb5186823cd82",
+   "updated": "2026-08-22"
+  },
+  {
+   "name": "omarchy-red-pill",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "ferlemes",
+   "description": "The Red Pill theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/ferlemes/omarchy-red-pill-theme/blob/3bb8873319c92a992e147b5aa7bf47597f38a606/backgrounds/01-the-choice.png"
+   },
+   "package": "omarchy-red-pill-3bb8873319c9.tar.gz",
+   "sha256": "bdb1dd30550ab7eb63c2f5eca8f020fb92b7fddc4f2e0fd78634347f7eab8e79",
+   "commit": "3bb8873319c92a992e147b5aa7bf47597f38a606",
+   "updated": "2026-10-21"
+  },
+  {
+   "name": "omarchy-ristretto-light",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "brokkoli71",
+   "description": "The Ristretto Light theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/brokkoli71/omarchy-ristretto-light-theme/blob/e9abefc5088485c994fc708a11f73f48c46457c9/backgrounds/1-ristretto-light.jpg",
+    "file": "1-ristretto-light.jpg",
+    "url": "https://raw.githubusercontent.com/brokkoli71/omarchy-ristretto-light-theme/e9abefc5088485c994fc708a11f73f48c46457c9/backgrounds/1-ristretto-light.jpg",
+    "sha256": "5c28eb708b84769108b1379a89fa1f5dbd142fa31884dc877ae6ad684c54118a"
+   },
+   "package": "omarchy-ristretto-light-e9abefc50884.tar.gz",
+   "sha256": "f5ab0cb0804b3933fac455477d0bc76e97b2a2729aad6a16333a67a7b6888a01",
+   "commit": "e9abefc5088485c994fc708a11f73f48c46457c9",
+   "updated": "2026-08-18"
+  },
+  {
+   "name": "omarchy-roadster-dark",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "IM0001GT",
+   "description": "The Roadster Dark theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/IM0001GT/omarchy-roadster-dark-theme/blob/94ceab2afd9f1231f5040ab2a693d9a258972305/backgrounds/01-night-taillight.jpg",
+    "file": "01-night-taillight.jpg",
+    "url": "https://raw.githubusercontent.com/IM0001GT/omarchy-roadster-dark-theme/94ceab2afd9f1231f5040ab2a693d9a258972305/backgrounds/01-night-taillight.jpg",
+    "sha256": "7d8934c0a825bb292fcaa04c62eb0bcc39080fc6512bca5c5cf5a41cb28aea16"
+   },
+   "package": "omarchy-roadster-dark-94ceab2afd9f.tar.gz",
+   "sha256": "146c2eedee43d2378922ad64642ec64253f7afd2a08dfc68e995f8f731b9d240",
+   "commit": "94ceab2afd9f1231f5040ab2a693d9a258972305",
+   "updated": "2026-10-16"
+  },
+  {
+   "name": "omarchy-robzee84",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "robzolkos",
+   "description": "The RobZee84 theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/robzolkos/omarchy-robzee84-theme/blob/814d02ea415a7aa95f2bfb0d6d2baada56503e44/backgrounds/00-pure-black.png",
+    "file": "00-pure-black.png",
+    "url": "https://raw.githubusercontent.com/robzolkos/omarchy-robzee84-theme/814d02ea415a7aa95f2bfb0d6d2baada56503e44/backgrounds/00-pure-black.png",
+    "sha256": "6136b7bb8c5fed9d8be182965647d40e3f8ad579ebd05049d37f03ff02a0807f"
+   },
+   "package": "omarchy-robzee84-814d02ea415a.tar.gz",
+   "sha256": "eda42004933a59960df449e6d414919c75305c53f26a3ba09c458ce3ee2d9225",
+   "commit": "814d02ea415a7aa95f2bfb0d6d2baada56503e44",
+   "updated": "2026-05-04"
+  },
+  {
+   "name": "omarchy-rose-of-dune",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "HANCORE-linux",
+   "description": "The Rose of Dune theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-roseofdune-theme/blob/d53c6ac4fae4eba465fadbebf8b6b43bbf4f1739/backgrounds/BG1.jpg"
+   },
+   "package": "omarchy-rose-of-dune-d53c6ac4fae4.tar.gz",
+   "sha256": "7a490249d8b2ee38b1dd6e181b4f944b489a3d4a0a33a9e8f36d64c75503e6c4",
+   "commit": "d53c6ac4fae4eba465fadbebf8b6b43bbf4f1739",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-rose-pine-dark",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "guilhermetk",
+   "description": "The Rose Pine Dark theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/guilhermetk/omarchy-rose-pine-dark/blob/ebe6ad030abd32cb6689b081ba0767c785441cb0/backgrounds/1-leafy-omarchy.webp",
+    "file": "1-leafy-omarchy.webp",
+    "url": "https://raw.githubusercontent.com/guilhermetk/omarchy-rose-pine-dark/ebe6ad030abd32cb6689b081ba0767c785441cb0/backgrounds/1-leafy-omarchy.webp",
+    "sha256": "48674d69abe3f817e94796a5dcce6416d05540887b924ec05e30a805ac29121c"
+   },
+   "package": "omarchy-rose-pine-dark-ebe6ad030abd.tar.gz",
+   "sha256": "c6d811c260346210490a96fe2c33ddee086d2f9db2343b17db1c0eb1fdc6ccdf",
+   "commit": "ebe6ad030abd32cb6689b081ba0767c785441cb0",
+   "updated": "2026-09-10"
+  },
+  {
+   "name": "omarchy-rose-pine-moon",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "Memnoc",
+   "description": "The Rose Pine Moon theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/Memnoc/omarchy-rose-pine-moon-theme/blob/e44dcc84ac6c49f52340dc4aa53955b7143a4ccd/backgrounds/1-leafy-moon.jpg"
+   },
+   "package": "omarchy-rose-pine-moon-e44dcc84ac6c.tar.gz",
+   "sha256": "6090c2fed0f5fcbd7e85510ee5cde7ee12fa329eac96a50131a7c9655d338ede",
+   "commit": "e44dcc84ac6c49f52340dc4aa53955b7143a4ccd",
+   "updated": "2026-08-19"
+  },
+  {
+   "name": "omarchy-ryu",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Ryu theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-ryu-theme/blob/8ec40701804590790def22d6a41d5b8cdc5626f7/backgrounds/BG1.png"
+   },
+   "package": "omarchy-ryu-8ec407018045.tar.gz",
+   "sha256": "4c52a3db78f5bf8749a926e33ef628fd48206821631191d8dd32b9850c5e650f",
+   "commit": "8ec40701804590790def22d6a41d5b8cdc5626f7",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-saga",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Saga theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-saga-theme/blob/945902081bebf5fa79a70511808dad9a3f2832bd/backgrounds/BG01.png"
+   },
+   "package": "omarchy-saga-945902081beb.tar.gz",
+   "sha256": "db459368b97cd26578218f086ebd2b050476015cb8fbdaee4724b4778949e2c8",
+   "commit": "945902081bebf5fa79a70511808dad9a3f2832bd",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-sakura",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "bjarneo",
+   "description": "The Sakura theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-sakura-theme/blob/dfeae9b8d245af05e16cf8bf3b89b743c94573d3/backgrounds/1.jpg",
+    "file": "1.jpg",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-sakura-theme/dfeae9b8d245af05e16cf8bf3b89b743c94573d3/backgrounds/1.jpg",
+    "sha256": "098ac2f8751233e7d0525bed7c4036e05a19f4ebc244d063ea07f5827a128013"
+   },
+   "package": "omarchy-sakura-dfeae9b8d245.tar.gz",
+   "sha256": "14aeffdfcf0de2f6f3e240e8c745a8525fb23a941a8195a4b805f7332cd94707",
+   "commit": "dfeae9b8d245af05e16cf8bf3b89b743c94573d3",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-sakura-mochi",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "OldJobobo",
+   "description": "The Sakura Mochi theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/OldJobobo/omarchy-sakura-mochi-theme/blob/a64fd93e43838366eab7884db6c49721e4d0d27c/backgrounds/0-sakura-mochi.png"
+   },
+   "package": "omarchy-sakura-mochi-a64fd93e4383.tar.gz",
+   "sha256": "06dd13cfb68583939dae43e116bfce0e24a427ead5f4dd7c67eefdc1ecb131de",
+   "commit": "a64fd93e43838366eab7884db6c49721e4d0d27c",
+   "updated": "2026-08-14"
+  },
+  {
+   "name": "omarchy-sapphire",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Sapphire theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-sapphire-theme/blob/8d8592c183299579af147a1d2a5e93127926d08d/backgrounds/BG1.jpg"
+   },
+   "package": "omarchy-sapphire-8d8592c18329.tar.gz",
+   "sha256": "aca393435bcbaee8ee777c996094941f2656d74a6095f5626a5ee7ae32b05625",
+   "commit": "8d8592c183299579af147a1d2a5e93127926d08d",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-saule",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "ElijahL",
+   "description": "The Säule theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/ElijahL/omarchy-saule-theme/blob/1a3f67664358278bde595ff6152acd050bd58713/backgrounds/1-fog-forest.jpg",
+    "file": "1-fog-forest.jpg",
+    "url": "https://raw.githubusercontent.com/ElijahL/omarchy-saule-theme/1a3f67664358278bde595ff6152acd050bd58713/backgrounds/1-fog-forest.jpg",
+    "sha256": "0f00a5e2d0f78d5e75c7a2f48101f6dee69179c6d94e9f4ebc6fb7c0f39462bf"
+   },
+   "package": "omarchy-saule-1a3f67664358.tar.gz",
+   "sha256": "eae019d6d4061dc1ce8409e14f8739adb3bcdd7d1b46294dc4f261169836eb02",
+   "commit": "1a3f67664358278bde595ff6152acd050bd58713",
+   "updated": "2026-10-17"
+  },
+  {
+   "name": "omarchy-shades-of-jade",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Shades of Jade theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-shadesofjade-theme/blob/b1b12ce9e98182fc115818a42b3727f13c883dc1/backgrounds/BG1.jpg"
+   },
+   "package": "omarchy-shades-of-jade-b1b12ce9e981.tar.gz",
+   "sha256": "ae1cb1fcee0482f5881ba9d384f48419995c83faff0ae4d3b3e4693b4fc526f5",
+   "commit": "b1b12ce9e98182fc115818a42b3727f13c883dc1",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-singularity",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "simpleprim8",
+   "description": "The Singularity theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/simpleprim8/omarchy-singularity-theme/blob/c3595a589c63e29bfb02dfa824e98db1d4f0af05/backgrounds/01-singularity.png"
+   },
+   "package": "omarchy-singularity-c3595a589c63.tar.gz",
+   "sha256": "ffab3e7d88cd3124204b338043b0081d9a7fd136184fed58c6f630d6fbbb2603",
+   "commit": "c3595a589c63e29bfb02dfa824e98db1d4f0af05",
+   "updated": "2026-10-17"
+  },
+  {
+   "name": "omarchy-snow",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "bjarneo",
+   "description": "The Snow theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/bjarneo/omarchy-snow-theme/blob/bfccca5bda969bc619af9db9f37da91e9fd52947/backgrounds/1-christina-gottardi-unsplash.jpg",
+    "file": "1-christina-gottardi-unsplash.jpg",
+    "url": "https://raw.githubusercontent.com/bjarneo/omarchy-snow-theme/bfccca5bda969bc619af9db9f37da91e9fd52947/backgrounds/1-christina-gottardi-unsplash.jpg",
+    "sha256": "ed43817c5602dfab39a466a2aa9f6ce831a2c51fe0e914511072d3b3535f9dce"
+   },
+   "package": "omarchy-snow-bfccca5bda96.tar.gz",
+   "sha256": "2d530a5d641aaa794964280e2b2ebab1be5ae6e8b8506c0432ff677b12670258",
+   "commit": "bfccca5bda969bc619af9db9f37da91e9fd52947",
+   "updated": "2026-08-30"
+  },
+  {
+   "name": "omarchy-snow-black",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "ankur311sudo",
+   "description": "The Snow Black theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/ankur311sudo/snow_black/blob/394d5d9f128b8c281c92a4e50ee15bcc16a825ed/backgrounds/1.jpg",
+    "file": "1.jpg",
+    "url": "https://raw.githubusercontent.com/ankur311sudo/snow_black/394d5d9f128b8c281c92a4e50ee15bcc16a825ed/backgrounds/1.jpg",
+    "sha256": "605e46f0e2aa5fe5615d3f109f2a056b801edd07f1ac01fa3c704b172d671074"
+   },
+   "package": "omarchy-snow-black-394d5d9f128b.tar.gz",
+   "sha256": "1140e8e3288183de8710db27e7a874ca2de91b82944dc14bbdc54f46a78dde1a",
+   "commit": "394d5d9f128b8c281c92a4e50ee15bcc16a825ed",
+   "updated": "2026-07-24"
+  },
+  {
+   "name": "omarchy-solar-relic",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "leaflessbranch",
+   "description": "The Solar Relic theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/leaflessbranch/omarchy-solar-relic-theme/blob/9a6b5fba143090b9357955cf5b2720196ccab7cb/backgrounds/02-golden-transit.webp"
+   },
+   "package": "omarchy-solar-relic-9a6b5fba1430.tar.gz",
+   "sha256": "cdb78af75bd4b5990ceb08b4031ceda93c2ef569d06d3148a7b972dedd7e9c15",
+   "commit": "9a6b5fba143090b9357955cf5b2720196ccab7cb",
+   "updated": "2026-08-31"
+  },
+  {
+   "name": "omarchy-space-monkey",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "TyRichards",
+   "description": "The Space Monkey theme from omarchy's community",
+   "wallpaper": {
+    "license": "GPL-3.0",
+    "source": "https://github.com/TyRichards/omarchy-space-monkey-theme/blob/814af8923d701e779d2894bd1b2b1d4cbec820ff/backgrounds/01-Retro.png"
+   },
+   "package": "omarchy-space-monkey-814af8923d70.tar.gz",
+   "sha256": "448bd92a90419004b6b5c86ce743b1a814b32b344c9f871ce0d9f6a57262d59f",
+   "commit": "814af8923d701e779d2894bd1b2b1d4cbec820ff",
+   "updated": "2026-09-14"
+  },
+  {
+   "name": "omarchy-starry-night",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "juangalt",
+   "description": "The Starry Night theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/juangalt/omarchy-starry-night-theme/blob/025b35a68d65ba8deeff7d3a63681e3ccf25fc3a/backgrounds/wallpaper.jpg"
+   },
+   "package": "omarchy-starry-night-025b35a68d65.tar.gz",
+   "sha256": "c61e37362228c564f968c1bb273ceed1f74c075ebb6be2c431f23b566fb05696",
+   "commit": "025b35a68d65ba8deeff7d3a63681e3ccf25fc3a",
+   "updated": "2026-08-24"
+  },
+  {
+   "name": "omarchy-starsend",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "r-bart",
+   "description": "The Starsend theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/r-bart/omarchy-starsend-theme/blob/3fe4b3a0148b1cd65b772aa96c93578c1efd67ec/backgrounds/1-dune.webp"
+   },
+   "package": "omarchy-starsend-3fe4b3a0148b.tar.gz",
+   "sha256": "97b9cd53a5e3b92f440acb3ba78e1a7c519a18410200f01dd52b0e41e1dcb222",
+   "commit": "3fe4b3a0148b1cd65b772aa96c93578c1efd67ec",
+   "updated": "2026-08-28"
+  },
+  {
+   "name": "omarchy-sticker-bomarchy",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "hammwl55-creator",
+   "description": "The StIcKeR bOmArChY theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/hammwl55-creator/omarchy-sticker-bomarchy-theme/blob/3eb451543351b175461de6994994fcad524a23cd/backgrounds/1-sticker-bomb.webp"
+   },
+   "package": "omarchy-sticker-bomarchy-3eb451543351.tar.gz",
+   "sha256": "3f7bbf93324b08f0108dc8bf0b694e04258f66f14643c763044b0760efcbf42e",
+   "commit": "3eb451543351b175461de6994994fcad524a23cd",
+   "updated": "2026-10-13"
+  },
+  {
+   "name": "omarchy-sunset-drive",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "tahayvr",
+   "description": "The Sunset Drive theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/tahayvr/omarchy-sunset-drive-theme/blob/1e6804ed91d531c23fb7487b65db81bb5818c485/backgrounds/1-sunset-drive.png",
+    "file": "1-sunset-drive.png",
+    "url": "https://raw.githubusercontent.com/tahayvr/omarchy-sunset-drive-theme/1e6804ed91d531c23fb7487b65db81bb5818c485/backgrounds/1-sunset-drive.png",
+    "sha256": "23d1041ac584055851f548daeeb6438b024823e72db722730f5432c97ae31ad7"
+   },
+   "package": "omarchy-sunset-drive-1e6804ed91d5.tar.gz",
+   "sha256": "d69c6e28204008fa8a68a6a300e5f4dc5355cd8575eab45c14d29f15b96f4c31",
+   "commit": "1e6804ed91d531c23fb7487b65db81bb5818c485",
+   "updated": "2026-02-22"
+  },
+  {
+   "name": "omarchy-synctax",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "pxllbt",
+   "description": "The Synctax theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/pxllbt/synctax/blob/c93a6f920739dfe167aa6d7824d345e5b213d370/backgrounds/gradient.webp"
+   },
+   "package": "omarchy-synctax-c93a6f920739.tar.gz",
+   "sha256": "380c3ee1e13d30a77b2ab6788f8d5d8ac70efc33ef40829ca1c69502d01fbc5b",
+   "commit": "c93a6f920739dfe167aa6d7824d345e5b213d370",
+   "updated": "2026-10-14"
+  },
+  {
+   "name": "omarchy-terminus",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "r-bart",
+   "description": "The Terminus theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/r-bart/omarchy-terminus-theme/blob/097faba47b7bae83be4bd2b13478359df70f5f6d/backgrounds/1-crescent.webp"
+   },
+   "package": "omarchy-terminus-097faba47b7b.tar.gz",
+   "sha256": "33397e2067782103aa1861c13fded4bdf93700ab30699f14ca11fcc308c3ec69",
+   "commit": "097faba47b7bae83be4bd2b13478359df70f5f6d",
+   "updated": "2026-08-28"
+  },
+  {
+   "name": "omarchy-the-greek",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "HANCORE-linux",
+   "description": "The The Greek theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-thegreek-theme/blob/b6754c11c81778f2748ce00308c2391cc875a1d1/backgrounds/BG1-1.jpg"
+   },
+   "package": "omarchy-the-greek-b6754c11c817.tar.gz",
+   "sha256": "59e63e57b956dee296518877663d590d3e24ef016269a2910af923a056b68abd",
+   "commit": "b6754c11c81778f2748ce00308c2391cc875a1d1",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-the-impossible-hotel",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "leaflessbranch",
+   "description": "The The Impossible Hotel theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/leaflessbranch/omarchy-the-impossible-hotel-theme/blob/432d0a33444164bd4d5783e8aa95c7b0ad85d3df/backgrounds/02-recursive-elevator.webp"
+   },
+   "package": "omarchy-the-impossible-hotel-432d0a334441.tar.gz",
+   "sha256": "e38a07ef384300471e7a0bf40cb42ce62509088d9c5b445d6aae434a36108f71",
+   "commit": "432d0a33444164bd4d5783e8aa95c7b0ad85d3df",
+   "updated": "2026-08-31"
+  },
+  {
+   "name": "omarchy-tokyo-night-oled",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "Justin-De-Sio",
+   "description": "The Tokyo Night OLED theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/Justin-De-Sio/omarchy-tokyoled-theme/blob/0dee4c1e1a783b5a8b3c4f4161e4e054e8e011c7/backgrounds/black.jpg",
+    "file": "black.jpg",
+    "url": "https://raw.githubusercontent.com/Justin-De-Sio/omarchy-tokyoled-theme/0dee4c1e1a783b5a8b3c4f4161e4e054e8e011c7/backgrounds/black.jpg",
+    "sha256": "8ec48b92d7138b922a5553a70cf385192e7d42b7d9f09c41cdfb89d0b97c0354"
+   },
+   "package": "omarchy-tokyo-night-oled-0dee4c1e1a78.tar.gz",
+   "sha256": "9682e4e2f2f8dd397b30aad7be77d5961caf865f7ef902ff687d5e38c7a035d0",
+   "commit": "0dee4c1e1a783b5a8b3c4f4161e4e054e8e011c7",
+   "updated": "2026-01-26"
+  },
+  {
+   "name": "omarchy-van-gogh",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "Nirmal314",
+   "description": "The Van Gogh theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/Nirmal314/omarchy-van-gogh-theme/blob/4afc00a392d7ee416e50b3634d429f0043166d9a/backgrounds/vg-1.jpg"
+   },
+   "package": "omarchy-van-gogh-4afc00a392d7.tar.gz",
+   "sha256": "40e35ea91aa4d34b069ebfe0685ad5e53fe499df1df9fe62105a5c40b2b1633e",
+   "commit": "4afc00a392d7ee416e50b3634d429f0043166d9a",
+   "updated": "2026-09-15"
+  },
+  {
+   "name": "omarchy-vault",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "r-bart",
+   "description": "The Vault theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/r-bart/omarchy-vault-theme/blob/8c4c10d4969e4aaa329508be17602ab0a4f736c5/backgrounds/1-gate.jpg"
+   },
+   "package": "omarchy-vault-8c4c10d4969e.tar.gz",
+   "sha256": "5fb3df4e8e156e957e5cdcdf095209a56188b89e49760cfcbc4aeb225dc41c9f",
+   "commit": "8c4c10d4969e4aaa329508be17602ab0a4f736c5",
+   "updated": "2026-08-28"
+  },
+  {
+   "name": "omarchy-velvet-night",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "HANCORE-linux",
+   "description": "The Velvet Night theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-velvetnight-theme/blob/41f3547c1e8425ea0a5f1a7cd5cfd171e2d8f657/backgrounds/BG1.jpg"
+   },
+   "package": "omarchy-velvet-night-41f3547c1e84.tar.gz",
+   "sha256": "38eaca983eb50149c54b1c8a35d7953ebfb7de5fb40d3df0cdf310e046f81c2d",
+   "commit": "41f3547c1e8425ea0a5f1a7cd5cfd171e2d8f657",
+   "updated": "2026-10-05"
+  },
+  {
+   "name": "omarchy-venice-from-above",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "mattbbia",
+   "description": "The Venice from Above theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/mattbbia/venice-from-above/blob/f19b64add63932b855d9b3b4cd2cb8e46f16fdb3/backgrounds/View%20of%20Venice%20%231%201500.jpg"
+   },
+   "package": "omarchy-venice-from-above-f19b64add639.tar.gz",
+   "sha256": "d990db724d773a7e8871350a8d99c281c9fbcb34a28d71ec954657a6cba8dec3",
+   "commit": "f19b64add63932b855d9b3b4cd2cb8e46f16fdb3",
+   "updated": "2026-08-27"
+  },
+  {
+   "name": "omarchy-vhs-80",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "tahayvr",
+   "description": "The VHS 80 theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/tahayvr/omarchy-vhs80-theme/blob/c43b2397b5d6a46c14c4ea1072d807d97ae43621/backgrounds/1-vhs80.png",
+    "file": "1-vhs80.png",
+    "url": "https://raw.githubusercontent.com/tahayvr/omarchy-vhs80-theme/c43b2397b5d6a46c14c4ea1072d807d97ae43621/backgrounds/1-vhs80.png",
+    "sha256": "9dbbba5f489b72e10ec468684d13755061a35e4818b0f147fc60d7e9f9f54e50"
+   },
+   "package": "omarchy-vhs-80-c43b2397b5d6.tar.gz",
+   "sha256": "bb3235956f7beebfc25361df4dfdbf0986578fd610d081949825b5c64a39bc97",
+   "commit": "c43b2397b5d6a46c14c4ea1072d807d97ae43621",
+   "updated": "2026-02-23"
+  },
+  {
+   "name": "omarchy-virginia-tech",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "ekholme",
+   "description": "The Virginia Tech theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/ekholme/omarchy-virginia-tech-theme/blob/f53435f9ca42a312dc67cbfafd39d78d5995aebe/backgrounds/gobbler.webp",
+    "file": "gobbler.webp",
+    "url": "https://raw.githubusercontent.com/ekholme/omarchy-virginia-tech-theme/f53435f9ca42a312dc67cbfafd39d78d5995aebe/backgrounds/gobbler.webp",
+    "sha256": "a0a4363cc5e0b409d1a8b99a2dfee75d4ee9a87c5750ca474e6b2a6a4f1ba3d6"
+   },
+   "package": "omarchy-virginia-tech-f53435f9ca42.tar.gz",
+   "sha256": "adafcb4574c622cdae0810d1c2e6d7760f5d6e8f4469c9914a944d5e25879f56",
+   "commit": "f53435f9ca42a312dc67cbfafd39d78d5995aebe",
+   "updated": "2026-10-23"
+  },
+  {
+   "name": "omarchy-void",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "vyrx-dev",
+   "description": "The Void theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/vyrx-dev/omarchy-void-theme/blob/c1fc95a579bf5c5e1d3b9edd43b1df501b5bd5c9/backgrounds/124.jpg"
+   },
+   "package": "omarchy-void-c1fc95a579bf.tar.gz",
+   "sha256": "5c73b2fbda1babf043869989a7d55a1fa51c151be3d1008d59e6724385a6c627",
+   "commit": "c1fc95a579bf5c5e1d3b9edd43b1df501b5bd5c9",
+   "updated": "2026-04-15"
+  },
+  {
+   "name": "omarchy-vulkanite",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "kyerpotts",
+   "description": "The Vulkanite theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/kyerpotts/omarchy-vulkanite-theme/blob/8383b5cb1d451d3b76d60445b2f8f00b1d2a702a/backgrounds/1-vulkanite-blastoff.webp"
+   },
+   "package": "omarchy-vulkanite-8383b5cb1d45.tar.gz",
+   "sha256": "6408050141d36f7894a13099b859111dd788829aa7f6ed99aa89a538a9f2a787",
+   "commit": "8383b5cb1d451d3b76d60445b2f8f00b1d2a702a",
+   "updated": "2026-08-27"
+  },
+  {
+   "name": "omarchy-waffle-cat",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "OldJobobo",
+   "description": "The Waffle Cat theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/OldJobobo/omarchy-waffle-cat-theme/blob/8ffff576d47cac48ca6606513b128bffa0c227fb/backgrounds/1-golden-lattice.jpg",
+    "file": "1-golden-lattice.jpg",
+    "url": "https://raw.githubusercontent.com/OldJobobo/omarchy-waffle-cat-theme/8ffff576d47cac48ca6606513b128bffa0c227fb/backgrounds/1-golden-lattice.jpg",
+    "sha256": "f336a851ff5fc5b92413261d9981b46b9da9f75e10e86be46960e229d1002bf9"
+   },
+   "package": "omarchy-waffle-cat-8ffff576d47c.tar.gz",
+   "sha256": "ffefb611ff1b40a58c4e8f12e47af3edaa82bb1463c71d277dbf67903cefca78",
+   "commit": "8ffff576d47cac48ca6606513b128bffa0c227fb",
+   "updated": "2026-08-16"
+  },
+  {
+   "name": "omarchy-white-gold",
+   "group": "omarchy-community",
+   "mode": "light",
+   "author": "HANCORE-linux",
+   "description": "The White Gold theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/HANCORE-linux/omarchy-whitegold-theme/blob/9c1be0b98adeef7d7677bf45d81dbdbf886c391b/backgrounds/BG1.jpg"
+   },
+   "package": "omarchy-white-gold-9c1be0b98ade.tar.gz",
+   "sha256": "147613a18712f5a324bc466958edfbbea793f188e56948f74845e6e6d4585e93",
+   "commit": "9c1be0b98adeef7d7677bf45d81dbdbf886c391b",
+   "updated": "2026-10-07"
+  },
+  {
+   "name": "omarchy-windows-dark-mode",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "OldJobobo",
+   "description": "The Windows Dark Mode theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/OldJobobo/omarchy-windows-dark-mode-theme/blob/d21208fe6973f1fe9bbe9bfc5eee063473cccece/backgrounds/01-midnight-ninja-cat.jpg",
+    "file": "01-midnight-ninja-cat.jpg",
+    "url": "https://raw.githubusercontent.com/OldJobobo/omarchy-windows-dark-mode-theme/d21208fe6973f1fe9bbe9bfc5eee063473cccece/backgrounds/01-midnight-ninja-cat.jpg",
+    "sha256": "714f309cb937f99bde48b321266731c6b35336b8a1919b6a3116982eb9dea6f6"
+   },
+   "package": "omarchy-windows-dark-mode-d21208fe6973.tar.gz",
+   "sha256": "a87099ce8861fe916bbf45ed2463f4a37b0d6a0ca847987cd8083eaa41e06a6d",
+   "commit": "d21208fe6973f1fe9bbe9bfc5eee063473cccece",
+   "updated": "2026-07-12"
+  },
+  {
+   "name": "omarchy-winslow",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "chipkoziara",
+   "description": "The Winslow theme from omarchy's community",
+   "wallpaper": {
+    "source": "https://github.com/chipkoziara/omarchy-winslow-theme/blob/43fb2d8973013367711fbd898bc0bfba4443c0f6/backgrounds/01-Winslow-Homer-1909-Right-and-Left.jpg",
+    "file": "01-Winslow-Homer-1909-Right-and-Left.jpg",
+    "url": "https://raw.githubusercontent.com/chipkoziara/omarchy-winslow-theme/43fb2d8973013367711fbd898bc0bfba4443c0f6/backgrounds/01-Winslow-Homer-1909-Right-and-Left.jpg",
+    "sha256": "38c6bcf7ac3abd531c3d244f0585bba303a03e696c637c3168dc027329f4e370"
+   },
+   "package": "omarchy-winslow-43fb2d897301.tar.gz",
+   "sha256": "2a4efafb162eb89afdb59226e5a9270cf8e3ecee876a5b829283c8e3537b9673",
+   "commit": "43fb2d8973013367711fbd898bc0bfba4443c0f6",
+   "updated": "2026-10-18"
+  },
+  {
+   "name": "omarchy-xenobotany-lab-no-7",
+   "group": "omarchy-community",
+   "mode": "dark",
+   "author": "leaflessbranch",
+   "description": "The Xenobotany Lab No. 7 theme from omarchy's community",
+   "wallpaper": {
+    "license": "MIT",
+    "source": "https://github.com/leaflessbranch/omarchy-xenobotany-lab-no-7-theme/blob/3c623856b761aa053ef2d3f174bd43f8ee282831/backgrounds/02-seed-archive.webp"
+   },
+   "package": "omarchy-xenobotany-lab-no-7-3c623856b761.tar.gz",
+   "sha256": "e5e2e79fbaa79b7a8cd540d2b23fe57420781d26a3a8d57232ce4401dd75d44b",
+   "commit": "3c623856b761aa053ef2d3f174bd43f8ee282831",
+   "updated": "2026-08-31"
+  }
+ ]
+}
